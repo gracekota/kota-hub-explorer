@@ -481,18 +481,39 @@ export const countries: Country[] = [
     image: ukImage,
     plans: [
       {
-        id: "uk-plan-1",
-        name: "NHS Plus Coverage",
+        id: "uk-allianz-standard",
+        name: "Allianz International Care - Standard",
         logo: "🏥",
-        description: "Comprehensive private health insurance to complement NHS services",
-        quoteUrl: "https://quote.kota.io/uk/nhs-plus"
+        description: "Comprehensive international health insurance with global coverage",
+        quoteUrl: "https://quote.kota.io/uk/allianz-standard"
       },
       {
-        id: "uk-plan-2",
-        name: "Executive Health Plan",
-        logo: "⭐",
-        description: "Premium health coverage for executives and professionals",
-        quoteUrl: "https://quote.kota.io/uk/executive"
+        id: "uk-allianz-premium",
+        name: "Allianz International Care - Premium",
+        logo: "🏥",
+        description: "Enhanced coverage with additional benefits and higher limits",
+        quoteUrl: "https://quote.kota.io/uk/allianz-premium"
+      },
+      {
+        id: "uk-vitality-core",
+        name: "Vitality - Core",
+        logo: "💚",
+        description: "Essential health insurance with wellness rewards",
+        quoteUrl: "https://quote.kota.io/uk/vitality-core"
+      },
+      {
+        id: "uk-vitality-plus",
+        name: "Vitality - Plus",
+        logo: "💚",
+        description: "Enhanced coverage with additional benefits and higher wellness rewards",
+        quoteUrl: "https://quote.kota.io/uk/vitality-plus"
+      },
+      {
+        id: "uk-vitality-premier",
+        name: "Vitality - Premier",
+        logo: "💚",
+        description: "Premium health insurance with maximum coverage and exclusive benefits",
+        quoteUrl: "https://quote.kota.io/uk/vitality-premier"
       }
     ],
     faqs: [

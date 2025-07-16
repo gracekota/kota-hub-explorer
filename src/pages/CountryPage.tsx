@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { countries } from "@/data/countries";
+import kotaLogo from "@/assets/kota-logo.png";
 
 const CountryPage = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -31,10 +32,17 @@ const CountryPage = () => {
       {/* Header */}
       <div className="bg-gradient-to-r from-primary to-accent text-primary-foreground">
         <div className="container mx-auto px-6 py-8">
-          <Link to="/" className="inline-flex items-center text-primary-foreground/80 hover:text-primary-foreground mb-4 transition-colors">
-            <ArrowLeft className="mr-2 h-4 w-4" />
-            Back to The Kota Hub
-          </Link>
+          <div className="flex items-center justify-between mb-4">
+            <Link to="/" className="inline-flex items-center text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+              <ArrowLeft className="mr-2 h-4 w-4" />
+              Back to The Kota Hub
+            </Link>
+            <img 
+              src={kotaLogo} 
+              alt="Kota Logo" 
+              className="h-8 w-auto"
+            />
+          </div>
           <div className="flex items-center space-x-4 animate-fade-in">
             <span className="text-4xl">{country.flag}</span>
             <div>
@@ -54,31 +62,142 @@ const CountryPage = () => {
             <TabsTrigger value="onboarding">Onboarding Resources</TabsTrigger>
           </TabsList>
 
-          <TabsContent value="plans" className="space-y-6">
-            <div className="grid gap-6 md:grid-cols-2">
-              {country.plans.map((plan) => (
-                <Card key={plan.id} className="group hover:shadow-card-hover transition-all duration-300 animate-scale-in">
-                  <CardHeader>
-                    <div className="flex items-center space-x-3">
-                      <span className="text-2xl">{plan.logo}</span>
-                      <div>
-                        <CardTitle className="group-hover:text-primary transition-colors">{plan.name}</CardTitle>
-                        <CardDescription>{plan.description}</CardDescription>
+          <TabsContent value="plans" className="space-y-8">
+            {/* UK-specific content with provider sections */}
+            {country.slug === 'uk' ? (
+              <div className="space-y-12">
+                {/* Allianz Section */}
+                <div className="space-y-6">
+                  <div className="text-center space-y-4">
+                    <h2 className="text-2xl font-bold text-foreground">Allianz International Care</h2>
+                    <p className="text-muted-foreground max-w-3xl mx-auto">
+                      Allianz offers comprehensive international health insurance with global coverage, 
+                      providing peace of mind for individuals and families living abroad or seeking 
+                      worldwide medical protection.
+                    </p>
+                  </div>
+                  
+                  <div className="grid gap-6 md:grid-cols-2">
+                    {country.plans.filter(plan => plan.id.includes('allianz')).map((plan) => (
+                      <Card key={plan.id} className="group hover:shadow-card-hover transition-all duration-300 animate-scale-in">
+                        <CardHeader>
+                          <div className="flex items-center space-x-3">
+                            <span className="text-2xl">{plan.logo}</span>
+                            <div>
+                              <CardTitle className="group-hover:text-primary transition-colors">{plan.name}</CardTitle>
+                              <CardDescription>{plan.description}</CardDescription>
+                            </div>
+                          </div>
+                        </CardHeader>
+                        <CardContent>
+                          <Button 
+                            className="w-full group-hover:bg-primary-hover transition-colors"
+                            onClick={() => window.open(plan.quoteUrl, '_blank')}
+                          >
+                            Get a Quote
+                            <ExternalLink className="ml-2 h-4 w-4" />
+                          </Button>
+                        </CardContent>
+                      </Card>
+                    ))}
+                  </div>
+
+                  <Card className="bg-muted/50">
+                    <CardHeader>
+                      <CardTitle>Why Choose Allianz?</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <ul className="space-y-2 text-muted-foreground">
+                        <li>• Global network of healthcare providers and medical facilities</li>
+                        <li>• 24/7 multilingual customer support and emergency assistance</li>
+                        <li>• Comprehensive coverage including outpatient, inpatient, and emergency care</li>
+                        <li>• Direct billing arrangements with many hospitals worldwide</li>
+                        <li>• Flexible plans to suit different budgets and healthcare needs</li>
+                        <li>• Trusted brand with decades of experience in international health insurance</li>
+                      </ul>
+                    </CardContent>
+                  </Card>
+                </div>
+
+                {/* Vitality Section */}
+                <div className="space-y-6">
+                  <div className="text-center space-y-4">
+                    <h2 className="text-2xl font-bold text-foreground">Vitality Health Insurance</h2>
+                    <p className="text-muted-foreground max-w-3xl mx-auto">
+                      Vitality rewards healthy living with their innovative health insurance plans. 
+                      Get comprehensive coverage while earning rewards for staying active and healthy.
+                    </p>
+                  </div>
+                  
+                  <div className="grid gap-6 md:grid-cols-3">
+                    {country.plans.filter(plan => plan.id.includes('vitality')).map((plan) => (
+                      <Card key={plan.id} className="group hover:shadow-card-hover transition-all duration-300 animate-scale-in">
+                        <CardHeader>
+                          <div className="flex items-center space-x-3">
+                            <span className="text-2xl">{plan.logo}</span>
+                            <div>
+                              <CardTitle className="group-hover:text-primary transition-colors">{plan.name}</CardTitle>
+                              <CardDescription>{plan.description}</CardDescription>
+                            </div>
+                          </div>
+                        </CardHeader>
+                        <CardContent>
+                          <Button 
+                            className="w-full group-hover:bg-primary-hover transition-colors"
+                            onClick={() => window.open(plan.quoteUrl, '_blank')}
+                          >
+                            Get a Quote
+                            <ExternalLink className="ml-2 h-4 w-4" />
+                          </Button>
+                        </CardContent>
+                      </Card>
+                    ))}
+                  </div>
+
+                  <Card className="bg-muted/50">
+                    <CardHeader>
+                      <CardTitle>Why Choose Vitality?</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <ul className="space-y-2 text-muted-foreground">
+                        <li>• Unique wellness rewards program that incentivizes healthy living</li>
+                        <li>• Discounts on gym memberships, healthy food, and wellness products</li>
+                        <li>• Comprehensive private medical insurance with fast access to treatment</li>
+                        <li>• Mental health support and employee assistance programs</li>
+                        <li>• Flexible coverage options to suit individual and family needs</li>
+                        <li>• Innovative health tracking through their app and wearable devices</li>
+                      </ul>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
+            ) : (
+              // Default layout for other countries
+              <div className="grid gap-6 md:grid-cols-2">
+                {country.plans.map((plan) => (
+                  <Card key={plan.id} className="group hover:shadow-card-hover transition-all duration-300 animate-scale-in">
+                    <CardHeader>
+                      <div className="flex items-center space-x-3">
+                        <span className="text-2xl">{plan.logo}</span>
+                        <div>
+                          <CardTitle className="group-hover:text-primary transition-colors">{plan.name}</CardTitle>
+                          <CardDescription>{plan.description}</CardDescription>
+                        </div>
                       </div>
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <Button 
-                      className="w-full group-hover:bg-primary-hover transition-colors"
-                      onClick={() => window.open(plan.quoteUrl, '_blank')}
-                    >
-                      Get a Quote
-                      <ExternalLink className="ml-2 h-4 w-4" />
-                    </Button>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+                    </CardHeader>
+                    <CardContent>
+                      <Button 
+                        className="w-full group-hover:bg-primary-hover transition-colors"
+                        onClick={() => window.open(plan.quoteUrl, '_blank')}
+                      >
+                        Get a Quote
+                        <ExternalLink className="ml-2 h-4 w-4" />
+                      </Button>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            )}
           </TabsContent>
 
           <TabsContent value="faqs" className="animate-fade-in">

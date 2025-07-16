@@ -2,6 +2,7 @@ import { useState, useMemo } from "react";
 import { CountryCard } from "@/components/CountryCard";
 import { SearchBar } from "@/components/SearchBar";
 import { countries } from "@/data/countries";
+import kotaLogo from "@/assets/kota-logo.png";
 
 const Index = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -21,6 +22,13 @@ const Index = () => {
       <div className="bg-gradient-to-br from-primary via-primary to-accent text-primary-foreground">
         <div className="container mx-auto px-6 py-16 text-center">
           <div className="animate-fade-in">
+            <div className="mb-6">
+              <img 
+                src={kotaLogo} 
+                alt="Kota Logo" 
+                className="mx-auto h-12 w-auto mb-4"
+              />
+            </div>
             <h1 className="text-5xl font-bold mb-4">The Kota Hub</h1>
             <p className="text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
               Get region-specific benefits & insurance info
