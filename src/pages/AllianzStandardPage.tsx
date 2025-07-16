@@ -33,8 +33,8 @@ const AllianzStandardPage = () => {
             </CardHeader>
             <CardContent>
               <div className="grid grid-cols-2 gap-4">
-                <div className="col-span-2">
-                  <div className="flex items-center space-x-3 p-3 bg-background rounded-lg border mb-4">
+                <Link to={`/country/${slug}/allianz-standard/deductible`}>
+                  <div className="flex items-center space-x-3 p-3 bg-background rounded-lg border hover:shadow-md transition-shadow cursor-pointer">
                     <div className="p-2 bg-red-100 rounded-lg">
                       <span className="text-red-600 font-bold">£</span>
                     </div>
@@ -43,29 +43,7 @@ const AllianzStandardPage = () => {
                       <p className="text-sm text-muted-foreground">View deductible options</p>
                     </div>
                   </div>
-                  
-                  <div className="space-y-4 p-4 bg-muted/30 rounded-lg">
-                    <div>
-                      <h5 className="font-semibold mb-2">What is a deductible?</h5>
-                      <p className="text-sm text-muted-foreground">
-                        A deductible on a health plan is the amount your employee will need to pay for their treatment, before the cover kicks in from the employer. This can apply to inpatient, outpatient and day-to-day expenses.
-                      </p>
-                    </div>
-                    
-                    <div>
-                      <h5 className="font-semibold mb-2">Video Explanation</h5>
-                      <div className="bg-background border-2 border-dashed border-muted-foreground/30 rounded-lg p-8 text-center">
-                        <div className="text-muted-foreground">
-                          <div className="text-4xl mb-2">📹</div>
-                          <p className="text-sm">Video embed placeholder</p>
-                          <p className="text-xs text-muted-foreground/70 mt-1">
-                            Replace this section with your video embed code
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                </Link>
                 
                 <div className="flex items-center space-x-3 p-3 bg-background rounded-lg border">
                   <div className="p-2 bg-purple-100 rounded-lg">
