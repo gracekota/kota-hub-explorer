@@ -77,80 +77,41 @@ const CountryPage = () => {
                   
                   <div className="space-y-4">
                     {country.plans.filter(plan => plan.id.includes('allianz')).map((plan) => (
-                      <Card key={plan.id} className="group hover:shadow-card-hover transition-all duration-300">
-                        <CardHeader className="pb-3">
-                          <div className="flex items-center space-x-3">
-                            <span className="text-xl">{plan.logo}</span>
-                            <div>
-                              <CardTitle className="text-lg group-hover:text-primary transition-colors">{plan.name}</CardTitle>
-                              <CardDescription className="text-sm">{plan.description}</CardDescription>
-                            </div>
-                          </div>
-                        </CardHeader>
-                        <CardContent className="pt-0">
-                          <Button 
-                            className="w-full"
-                            onClick={() => window.open(plan.quoteUrl, '_blank')}
-                          >
-                            Get a Quote
-                            <ExternalLink className="ml-2 h-4 w-4" />
-                          </Button>
-                        </CardContent>
-                      </Card>
+                      <div key={plan.id}>
+                        <Link to={`/country/${slug}/allianz-standard`}>
+                          <Card className="group hover:shadow-card-hover transition-all duration-300 cursor-pointer">
+                            <CardHeader className="pb-3">
+                              <div className="flex items-center space-x-3">
+                                <span className="text-xl">{plan.logo}</span>
+                                <div>
+                                  <CardTitle className="text-lg group-hover:text-primary transition-colors">{plan.name}</CardTitle>
+                                  <CardDescription className="text-sm">{plan.description}</CardDescription>
+                                </div>
+                              </div>
+                            </CardHeader>
+                            <CardContent className="pt-0">
+                              <div className="flex space-x-2">
+                                <Button 
+                                  className="flex-1"
+                                  onClick={(e) => {
+                                    e.stopPropagation();
+                                    window.open(plan.quoteUrl, '_blank');
+                                  }}
+                                >
+                                  Get a Quote
+                                  <ExternalLink className="ml-2 h-4 w-4" />
+                                </Button>
+                                <Button variant="outline" className="flex-1">
+                                  View Details
+                                </Button>
+                              </div>
+                            </CardContent>
+                          </Card>
+                        </Link>
+                      </div>
                     ))}
                   </div>
 
-                  <Card className="bg-muted/50">
-                    <CardHeader>
-                      <CardTitle className="text-lg">Plan Details</CardTitle>
-                      <CardDescription>
-                        Below is an overview of the plan; please ensure you review the full plan details before making a decision.
-                      </CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="grid grid-cols-2 gap-4">
-                        <div className="flex items-center space-x-3 p-3 bg-background rounded-lg border">
-                          <div className="p-2 bg-red-100 rounded-lg">
-                            <span className="text-red-600 font-bold">£</span>
-                          </div>
-                          <div>
-                            <h4 className="font-semibold">Deductible</h4>
-                            <p className="text-sm text-muted-foreground">View deductible options</p>
-                          </div>
-                        </div>
-                        
-                        <div className="flex items-center space-x-3 p-3 bg-background rounded-lg border">
-                          <div className="p-2 bg-purple-100 rounded-lg">
-                            <span className="text-purple-600 font-bold">📋</span>
-                          </div>
-                          <div>
-                            <h4 className="font-semibold">Full plan details</h4>
-                            <p className="text-sm text-muted-foreground">Complete plan information</p>
-                          </div>
-                        </div>
-                        
-                        <div className="flex items-center space-x-3 p-3 bg-background rounded-lg border">
-                          <div className="p-2 bg-teal-100 rounded-lg">
-                            <span className="text-teal-600 font-bold">📊</span>
-                          </div>
-                          <div>
-                            <h4 className="font-semibold">Table of benefits: Glossary</h4>
-                            <p className="text-sm text-muted-foreground">Benefits breakdown</p>
-                          </div>
-                        </div>
-                        
-                        <div className="flex items-center space-x-3 p-3 bg-background rounded-lg border">
-                          <div className="p-2 bg-blue-100 rounded-lg">
-                            <span className="text-blue-600 font-bold">🕐</span>
-                          </div>
-                          <div>
-                            <h4 className="font-semibold">Waiting periods</h4>
-                            <p className="text-sm text-muted-foreground">Coverage waiting times</p>
-                          </div>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
                 </div>
 
                 {/* Vitality Section */}
