@@ -38,10 +38,23 @@ const FullPlanDetailsPage = () => {
                 </p>
                 
                 <div className="bg-background p-4 rounded-lg border">
-                  <h3 className="font-semibold mb-2">📋 Plan Documentation</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Complete plan documentation and policy details will be available here.
-                  </p>
+                  <h3 className="font-semibold mb-4">📋 Plan Documentation</h3>
+                  <div className="w-full h-96 border rounded-lg overflow-hidden">
+                    <iframe
+                      src="/path-to-your-pdf.pdf"
+                      width="100%"
+                      height="100%"
+                      title="Allianz Plan Documentation"
+                      className="border-0"
+                    >
+                      <p className="text-sm text-muted-foreground p-4">
+                        Your browser does not support PDFs. 
+                        <a href="/path-to-your-pdf.pdf" className="text-primary hover:underline ml-1">
+                          Download the PDF
+                        </a>
+                      </p>
+                    </iframe>
+                  </div>
                 </div>
               </div>
             </CardContent>
