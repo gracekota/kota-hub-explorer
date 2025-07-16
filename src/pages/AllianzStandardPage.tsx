@@ -45,35 +45,41 @@ const AllianzStandardPage = () => {
                   </div>
                 </Link>
                 
-                <div className="flex items-center space-x-3 p-3 bg-background rounded-lg border">
-                  <div className="p-2 bg-purple-100 rounded-lg">
-                    <span className="text-purple-600 font-bold">📋</span>
+                <Link to={`/country/${slug}/allianz-standard/full-plan-details`}>
+                  <div className="flex items-center space-x-3 p-3 bg-background rounded-lg border hover:shadow-md transition-shadow cursor-pointer">
+                    <div className="p-2 bg-purple-100 rounded-lg">
+                      <span className="text-purple-600 font-bold">📋</span>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold">Full plan details</h4>
+                      <p className="text-sm text-muted-foreground">Complete plan information</p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-semibold">Full plan details</h4>
-                    <p className="text-sm text-muted-foreground">Complete plan information</p>
-                  </div>
-                </div>
+                </Link>
                 
-                <div className="flex items-center space-x-3 p-3 bg-background rounded-lg border">
-                  <div className="p-2 bg-teal-100 rounded-lg">
-                    <span className="text-teal-600 font-bold">📊</span>
+                <Link to={`/country/${slug}/allianz-standard/benefits-glossary`}>
+                  <div className="flex items-center space-x-3 p-3 bg-background rounded-lg border hover:shadow-md transition-shadow cursor-pointer">
+                    <div className="p-2 bg-teal-100 rounded-lg">
+                      <span className="text-teal-600 font-bold">📊</span>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold">Table of benefits: Glossary</h4>
+                      <p className="text-sm text-muted-foreground">Benefits breakdown</p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-semibold">Table of benefits: Glossary</h4>
-                    <p className="text-sm text-muted-foreground">Benefits breakdown</p>
-                  </div>
-                </div>
+                </Link>
                 
-                <div className="flex items-center space-x-3 p-3 bg-background rounded-lg border">
-                  <div className="p-2 bg-blue-100 rounded-lg">
-                    <span className="text-blue-600 font-bold">🕐</span>
+                <Link to={`/country/${slug}/allianz-standard/waiting-periods`}>
+                  <div className="flex items-center space-x-3 p-3 bg-background rounded-lg border hover:shadow-md transition-shadow cursor-pointer">
+                    <div className="p-2 bg-blue-100 rounded-lg">
+                      <span className="text-blue-600 font-bold">🕐</span>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold">Waiting periods</h4>
+                      <p className="text-sm text-muted-foreground">Coverage waiting times</p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-semibold">Waiting periods</h4>
-                    <p className="text-sm text-muted-foreground">Coverage waiting times</p>
-                  </div>
-                </div>
+                </Link>
               </div>
             </CardContent>
           </Card>
