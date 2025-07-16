@@ -62,35 +62,6 @@ const DeductiblePage = () => {
                 </div>
               </CardContent>
             </Card>
-
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-xl">Deductible Options</CardTitle>
-                <CardDescription>
-                  Available deductible amounts for this plan
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  <div className="p-4 border rounded-lg text-center">
-                    <div className="text-2xl font-bold text-primary mb-2">£0</div>
-                    <div className="text-sm text-muted-foreground">No deductible</div>
-                  </div>
-                  <div className="p-4 border rounded-lg text-center">
-                    <div className="text-2xl font-bold text-primary mb-2">£500</div>
-                    <div className="text-sm text-muted-foreground">Lower premium</div>
-                  </div>
-                  <div className="p-4 border rounded-lg text-center">
-                    <div className="text-2xl font-bold text-primary mb-2">£1,000</div>
-                    <div className="text-sm text-muted-foreground">Lowest premium</div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </div>
-    </div>
   );
 };
 
