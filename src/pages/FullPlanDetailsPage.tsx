@@ -1,3 +1,4 @@
+
 import { ArrowLeft } from "lucide-react";
 import { Link, useParams } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -40,21 +41,18 @@ const FullPlanDetailsPage = () => {
                 
                 <div className="bg-background p-4 rounded-lg border">
                   <h3 className="font-semibold mb-4">📋 Plan Documentation</h3>
-                  <div className="w-full h-96 border rounded-lg overflow-hidden">
-                    <iframe
-                      src="/path-to-your-pdf.pdf"
-                      width="100%"
-                      height="100%"
-                      title="Allianz Plan Documentation"
-                      className="border-0"
-                    >
-                      <p className="text-sm text-muted-foreground p-4">
-                        Your browser does not support PDFs. 
-                        <a href="/path-to-your-pdf.pdf" className="text-primary hover:underline ml-1">
-                          Download the PDF
-                        </a>
+                  <div className="w-full h-96 border rounded-lg overflow-hidden bg-muted/30 flex items-center justify-center">
+                    <div className="text-center p-8">
+                      <div className="text-6xl mb-4">📄</div>
+                      <h4 className="text-lg font-semibold mb-2">PDF Document Placeholder</h4>
+                      <p className="text-sm text-muted-foreground mb-4">
+                        To display a PDF here, upload your PDF file to the public folder and update the src path in the iframe.
                       </p>
-                    </iframe>
+                      <p className="text-xs text-muted-foreground">
+                        Example: Place your PDF in <code className="bg-muted px-1 rounded">public/documents/plan.pdf</code><br/>
+                        Then update the iframe src to <code className="bg-muted px-1 rounded">/documents/plan.pdf</code>
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
