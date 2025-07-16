@@ -63,35 +63,33 @@ const CountryPage = () => {
           </TabsList>
 
           <TabsContent value="plans" className="space-y-8">
-            {/* UK-specific content with provider sections */}
+            {/* UK-specific content with providers side by side */}
             {country.slug === 'uk' ? (
-              <div className="space-y-12">
+              <div className="grid gap-8 lg:grid-cols-2">
                 {/* Allianz Section */}
                 <div className="space-y-6">
                   <div className="text-center space-y-4">
                     <h2 className="text-2xl font-bold text-foreground">Allianz International Care</h2>
-                    <p className="text-muted-foreground max-w-3xl mx-auto">
-                      Allianz offers comprehensive international health insurance with global coverage, 
-                      providing peace of mind for individuals and families living abroad or seeking 
-                      worldwide medical protection.
+                    <p className="text-muted-foreground">
+                      Comprehensive international health insurance with global coverage and peace of mind.
                     </p>
                   </div>
                   
-                  <div className="grid gap-6 md:grid-cols-2">
+                  <div className="space-y-4">
                     {country.plans.filter(plan => plan.id.includes('allianz')).map((plan) => (
-                      <Card key={plan.id} className="group hover:shadow-card-hover transition-all duration-300 animate-scale-in">
-                        <CardHeader>
+                      <Card key={plan.id} className="group hover:shadow-card-hover transition-all duration-300">
+                        <CardHeader className="pb-3">
                           <div className="flex items-center space-x-3">
-                            <span className="text-2xl">{plan.logo}</span>
+                            <span className="text-xl">{plan.logo}</span>
                             <div>
-                              <CardTitle className="group-hover:text-primary transition-colors">{plan.name}</CardTitle>
-                              <CardDescription>{plan.description}</CardDescription>
+                              <CardTitle className="text-lg group-hover:text-primary transition-colors">{plan.name}</CardTitle>
+                              <CardDescription className="text-sm">{plan.description}</CardDescription>
                             </div>
                           </div>
                         </CardHeader>
-                        <CardContent>
+                        <CardContent className="pt-0">
                           <Button 
-                            className="w-full group-hover:bg-primary-hover transition-colors"
+                            className="w-full"
                             onClick={() => window.open(plan.quoteUrl, '_blank')}
                           >
                             Get a Quote
@@ -104,16 +102,16 @@ const CountryPage = () => {
 
                   <Card className="bg-muted/50">
                     <CardHeader>
-                      <CardTitle>Why Choose Allianz?</CardTitle>
+                      <CardTitle className="text-lg">Why Choose Allianz?</CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <ul className="space-y-2 text-muted-foreground">
-                        <li>• Global network of healthcare providers and medical facilities</li>
-                        <li>• 24/7 multilingual customer support and emergency assistance</li>
-                        <li>• Comprehensive coverage including outpatient, inpatient, and emergency care</li>
-                        <li>• Direct billing arrangements with many hospitals worldwide</li>
-                        <li>• Flexible plans to suit different budgets and healthcare needs</li>
-                        <li>• Trusted brand with decades of experience in international health insurance</li>
+                      <ul className="space-y-2 text-sm text-muted-foreground">
+                        <li>• Global network of healthcare providers</li>
+                        <li>• 24/7 multilingual customer support</li>
+                        <li>• Comprehensive coverage options</li>
+                        <li>• Direct billing arrangements worldwide</li>
+                        <li>• Flexible plans for different budgets</li>
+                        <li>• Decades of insurance experience</li>
                       </ul>
                     </CardContent>
                   </Card>
@@ -123,27 +121,26 @@ const CountryPage = () => {
                 <div className="space-y-6">
                   <div className="text-center space-y-4">
                     <h2 className="text-2xl font-bold text-foreground">Vitality Health Insurance</h2>
-                    <p className="text-muted-foreground max-w-3xl mx-auto">
-                      Vitality rewards healthy living with their innovative health insurance plans. 
-                      Get comprehensive coverage while earning rewards for staying active and healthy.
+                    <p className="text-muted-foreground">
+                      Innovative health insurance that rewards healthy living with comprehensive coverage.
                     </p>
                   </div>
                   
-                  <div className="grid gap-6 md:grid-cols-3">
+                  <div className="space-y-4">
                     {country.plans.filter(plan => plan.id.includes('vitality')).map((plan) => (
-                      <Card key={plan.id} className="group hover:shadow-card-hover transition-all duration-300 animate-scale-in">
-                        <CardHeader>
+                      <Card key={plan.id} className="group hover:shadow-card-hover transition-all duration-300">
+                        <CardHeader className="pb-3">
                           <div className="flex items-center space-x-3">
-                            <span className="text-2xl">{plan.logo}</span>
+                            <span className="text-xl">{plan.logo}</span>
                             <div>
-                              <CardTitle className="group-hover:text-primary transition-colors">{plan.name}</CardTitle>
-                              <CardDescription>{plan.description}</CardDescription>
+                              <CardTitle className="text-lg group-hover:text-primary transition-colors">{plan.name}</CardTitle>
+                              <CardDescription className="text-sm">{plan.description}</CardDescription>
                             </div>
                           </div>
                         </CardHeader>
-                        <CardContent>
+                        <CardContent className="pt-0">
                           <Button 
-                            className="w-full group-hover:bg-primary-hover transition-colors"
+                            className="w-full"
                             onClick={() => window.open(plan.quoteUrl, '_blank')}
                           >
                             Get a Quote
@@ -156,16 +153,16 @@ const CountryPage = () => {
 
                   <Card className="bg-muted/50">
                     <CardHeader>
-                      <CardTitle>Why Choose Vitality?</CardTitle>
+                      <CardTitle className="text-lg">Why Choose Vitality?</CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <ul className="space-y-2 text-muted-foreground">
-                        <li>• Unique wellness rewards program that incentivizes healthy living</li>
-                        <li>• Discounts on gym memberships, healthy food, and wellness products</li>
-                        <li>• Comprehensive private medical insurance with fast access to treatment</li>
-                        <li>• Mental health support and employee assistance programs</li>
-                        <li>• Flexible coverage options to suit individual and family needs</li>
-                        <li>• Innovative health tracking through their app and wearable devices</li>
+                      <ul className="space-y-2 text-sm text-muted-foreground">
+                        <li>• Unique wellness rewards program</li>
+                        <li>• Discounts on gym memberships & healthy food</li>
+                        <li>• Fast access to private medical care</li>
+                        <li>• Mental health support programs</li>
+                        <li>• Flexible coverage for individuals & families</li>
+                        <li>• Health tracking through app & wearables</li>
                       </ul>
                     </CardContent>
                   </Card>
