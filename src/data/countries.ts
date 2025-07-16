@@ -1,7 +1,20 @@
+// Import country images
+import belgiumImage from "@/assets/belgium.jpg";
+import franceImage from "@/assets/france.jpg";
+import germanyImage from "@/assets/germany.jpg";
+import irelandImage from "@/assets/ireland.jpg";
+import italyImage from "@/assets/italy.jpg";
+import luxembourgImage from "@/assets/luxembourg.jpg";
+import netherlandsImage from "@/assets/netherlands.jpg";
+import portugalImage from "@/assets/portugal.jpg";
+import spainImage from "@/assets/spain.jpg";
+import ukImage from "@/assets/uk.jpg";
+
 export interface Country {
   name: string;
   slug: string;
   flag: string;
+  image: string;
   plans: InsurancePlan[];
   faqs: FAQ[];
   onboardingLinks: OnboardingLink[];
@@ -30,244 +43,10 @@ export interface OnboardingLink {
 
 export const countries: Country[] = [
   {
-    name: "United Kingdom",
-    slug: "uk",
-    flag: "🇬🇧",
-    plans: [
-      {
-        id: "uk-plan-1",
-        name: "NHS Plus Coverage",
-        logo: "🏥",
-        description: "Comprehensive private health insurance to complement NHS services",
-        quoteUrl: "https://quote.kota.io/uk/nhs-plus"
-      },
-      {
-        id: "uk-plan-2",
-        name: "Executive Health Plan",
-        logo: "⭐",
-        description: "Premium health coverage for executives and professionals",
-        quoteUrl: "https://quote.kota.io/uk/executive"
-      }
-    ],
-    faqs: [
-      {
-        id: "uk-faq-1",
-        question: "How does private insurance work with NHS?",
-        answer: "Private insurance complements NHS services by providing faster access to specialists, private rooms, and elective procedures while keeping NHS as your primary healthcare provider."
-      },
-      {
-        id: "uk-faq-2",
-        question: "What's typically covered in UK private health insurance?",
-        answer: "Most plans cover specialist consultations, diagnostic tests, surgery, cancer treatment, and mental health services. NHS emergency care remains free regardless."
-      }
-    ],
-    onboardingLinks: [
-      {
-        id: "uk-onboard-1",
-        title: "Understanding UK Healthcare System",
-        description: "Learn how private insurance works alongside NHS",
-        url: "/resources/uk-healthcare-guide"
-      },
-      {
-        id: "uk-onboard-2",
-        title: "Tax Benefits Guide",
-        description: "Understand tax implications of health insurance in the UK",
-        url: "/resources/uk-tax-benefits"
-      }
-    ]
-  },
-  {
-    name: "Germany",
-    slug: "germany",
-    flag: "🇩🇪",
-    plans: [
-      {
-        id: "de-plan-1",
-        name: "Private Krankenversicherung",
-        logo: "🏥",
-        description: "Private health insurance for high earners and self-employed",
-        quoteUrl: "https://quote.kota.io/de/private"
-      },
-      {
-        id: "de-plan-2",
-        name: "Zusatzversicherung",
-        logo: "➕",
-        description: "Supplementary insurance to enhance statutory coverage",
-        quoteUrl: "https://quote.kota.io/de/supplementary"
-      }
-    ],
-    faqs: [
-      {
-        id: "de-faq-1",
-        question: "Who can get private health insurance in Germany?",
-        answer: "Employees earning above €69,300 (2024), self-employed individuals, civil servants, and students can opt for private health insurance."
-      },
-      {
-        id: "de-faq-2",
-        question: "Can I switch back to statutory insurance?",
-        answer: "Switching back is possible but restricted. Generally only possible if your income drops below the threshold or you become employed and earn less than the limit."
-      }
-    ],
-    onboardingLinks: [
-      {
-        id: "de-onboard-1",
-        title: "German Healthcare System Guide",
-        description: "Navigate the German healthcare system as an expat",
-        url: "/resources/germany-healthcare-guide"
-      },
-      {
-        id: "de-onboard-2",
-        title: "Private vs Statutory Insurance",
-        description: "Compare your options in the German system",
-        url: "/resources/germany-insurance-comparison"
-      }
-    ]
-  },
-  {
-    name: "France",
-    slug: "france",
-    flag: "🇫🇷",
-    plans: [
-      {
-        id: "fr-plan-1",
-        name: "Mutuelle Santé",
-        logo: "🏥",
-        description: "Complementary health insurance to enhance Sécurité Sociale",
-        quoteUrl: "https://quote.kota.io/fr/mutuelle"
-      },
-      {
-        id: "fr-plan-2",
-        name: "International Expat Plan",
-        logo: "🌍",
-        description: "Comprehensive coverage for international residents",
-        quoteUrl: "https://quote.kota.io/fr/expat"
-      }
-    ],
-    faqs: [
-      {
-        id: "fr-faq-1",
-        question: "Is complementary insurance mandatory in France?",
-        answer: "While not legally mandatory for all, most employers must provide complementary health insurance (mutuelle) to employees since 2016."
-      },
-      {
-        id: "fr-faq-2",
-        question: "How does reimbursement work in France?",
-        answer: "Sécurité Sociale covers 70% of most medical costs, and your mutuelle typically covers the remaining 30% plus additional benefits."
-      }
-    ],
-    onboardingLinks: [
-      {
-        id: "fr-onboard-1",
-        title: "French Healthcare Registration",
-        description: "How to register for Sécurité Sociale",
-        url: "/resources/france-healthcare-registration"
-      },
-      {
-        id: "fr-onboard-2",
-        title: "Choosing a Mutuelle",
-        description: "Guide to selecting complementary insurance",
-        url: "/resources/france-mutuelle-guide"
-      }
-    ]
-  },
-  {
-    name: "Spain",
-    slug: "spain",
-    flag: "🇪🇸",
-    plans: [
-      {
-        id: "es-plan-1",
-        name: "Seguro Médico Privado",
-        logo: "🏥",
-        description: "Private health insurance for faster access and choice",
-        quoteUrl: "https://quote.kota.io/es/private"
-      },
-      {
-        id: "es-plan-2",
-        name: "Seguro Dental",
-        logo: "🦷",
-        description: "Specialized dental coverage to complement public system",
-        quoteUrl: "https://quote.kota.io/es/dental"
-      }
-    ],
-    faqs: [
-      {
-        id: "es-faq-1",
-        question: "Do I need private insurance in Spain?",
-        answer: "No, public healthcare is excellent and free for residents. Private insurance provides faster access, private rooms, and choice of specialists."
-      },
-      {
-        id: "es-faq-2",
-        question: "How do I access public healthcare as an expat?",
-        answer: "EU citizens can use EHIC initially, then register for Tarjeta Sanitaria. Non-EU residents need to register with Social Security first."
-      }
-    ],
-    onboardingLinks: [
-      {
-        id: "es-onboard-1",
-        title: "Spanish Healthcare Registration",
-        description: "How to register for public healthcare",
-        url: "/resources/spain-healthcare-registration"
-      },
-      {
-        id: "es-onboard-2",
-        title: "Private vs Public Healthcare",
-        description: "Understanding your options in Spain",
-        url: "/resources/spain-healthcare-comparison"
-      }
-    ]
-  },
-  {
-    name: "Netherlands",
-    slug: "netherlands",
-    flag: "🇳🇱",
-    plans: [
-      {
-        id: "nl-plan-1",
-        name: "Basisverzekering",
-        logo: "🏥",
-        description: "Mandatory basic health insurance for all residents",
-        quoteUrl: "https://quote.kota.io/nl/basic"
-      },
-      {
-        id: "nl-plan-2",
-        name: "Aanvullende Verzekering",
-        logo: "➕",
-        description: "Supplementary insurance for dental, physio, and extras",
-        quoteUrl: "https://quote.kota.io/nl/supplementary"
-      }
-    ],
-    faqs: [
-      {
-        id: "nl-faq-1",
-        question: "Is health insurance mandatory in the Netherlands?",
-        answer: "Yes, all residents must have basic health insurance (basisverzekering). You have 4 months to arrange this after becoming a resident."
-      },
-      {
-        id: "nl-faq-2",
-        question: "What's the difference between basic and supplementary insurance?",
-        answer: "Basic insurance covers essential medical care. Supplementary covers extras like dental care, physiotherapy, alternative medicine, and abroad coverage."
-      }
-    ],
-    onboardingLinks: [
-      {
-        id: "nl-onboard-1",
-        title: "Dutch Healthcare System Guide",
-        description: "Understanding mandatory health insurance",
-        url: "/resources/netherlands-healthcare-guide"
-      },
-      {
-        id: "nl-onboard-2",
-        title: "Choosing an Insurer",
-        description: "Compare Dutch health insurance providers",
-        url: "/resources/netherlands-insurer-comparison"
-      }
-    ]
-  },
-  {
     name: "Belgium",
     slug: "belgium",
     flag: "🇧🇪",
+    image: belgiumImage,
     plans: [
       {
         id: "be-plan-1",
@@ -312,49 +91,98 @@ export const countries: Country[] = [
     ]
   },
   {
-    name: "Italy",
-    slug: "italy",
-    flag: "🇮🇹",
+    name: "France",
+    slug: "france",
+    flag: "🇫🇷",
+    image: franceImage,
     plans: [
       {
-        id: "it-plan-1",
-        name: "Assicurazione Sanitaria",
+        id: "fr-plan-1",
+        name: "Mutuelle Santé",
         logo: "🏥",
-        description: "Private health insurance to complement SSN",
-        quoteUrl: "https://quote.kota.io/it/private"
+        description: "Complementary health insurance to enhance Sécurité Sociale",
+        quoteUrl: "https://quote.kota.io/fr/mutuelle"
       },
       {
-        id: "it-plan-2",
-        name: "Fondo Sanitario",
-        logo: "💼",
-        description: "Corporate health funds for employees",
-        quoteUrl: "https://quote.kota.io/it/corporate"
+        id: "fr-plan-2",
+        name: "International Expat Plan",
+        logo: "🌍",
+        description: "Comprehensive coverage for international residents",
+        quoteUrl: "https://quote.kota.io/fr/expat"
       }
     ],
     faqs: [
       {
-        id: "it-faq-1",
-        question: "Is private health insurance necessary in Italy?",
-        answer: "No, the SSN (Servizio Sanitario Nazionale) provides universal healthcare. Private insurance offers faster access and private facilities."
+        id: "fr-faq-1",
+        question: "Is complementary insurance mandatory in France?",
+        answer: "While not legally mandatory for all, most employers must provide complementary health insurance (mutuelle) to employees since 2016."
       },
       {
-        id: "it-faq-2",
-        question: "How do I register for Italian healthcare?",
-        answer: "Register with your local ASL (Azienda Sanitaria Locale) to get a tessera sanitaria (health card) for access to public healthcare."
+        id: "fr-faq-2",
+        question: "How does reimbursement work in France?",
+        answer: "Sécurité Sociale covers 70% of most medical costs, and your mutuelle typically covers the remaining 30% plus additional benefits."
       }
     ],
     onboardingLinks: [
       {
-        id: "it-onboard-1",
-        title: "Italian Healthcare Registration",
-        description: "How to register with SSN",
-        url: "/resources/italy-healthcare-registration"
+        id: "fr-onboard-1",
+        title: "French Healthcare Registration",
+        description: "How to register for Sécurité Sociale",
+        url: "/resources/france-healthcare-registration"
       },
       {
-        id: "it-onboard-2",
-        title: "Understanding ASL Services",
-        description: "Navigate local health authorities",
-        url: "/resources/italy-asl-guide"
+        id: "fr-onboard-2",
+        title: "Choosing a Mutuelle",
+        description: "Guide to selecting complementary insurance",
+        url: "/resources/france-mutuelle-guide"
+      }
+    ]
+  },
+  {
+    name: "Germany",
+    slug: "germany",
+    flag: "🇩🇪",
+    image: germanyImage,
+    plans: [
+      {
+        id: "de-plan-1",
+        name: "Private Krankenversicherung",
+        logo: "🏥",
+        description: "Private health insurance for high earners and self-employed",
+        quoteUrl: "https://quote.kota.io/de/private"
+      },
+      {
+        id: "de-plan-2",
+        name: "Zusatzversicherung",
+        logo: "➕",
+        description: "Supplementary insurance to enhance statutory coverage",
+        quoteUrl: "https://quote.kota.io/de/supplementary"
+      }
+    ],
+    faqs: [
+      {
+        id: "de-faq-1",
+        question: "Who can get private health insurance in Germany?",
+        answer: "Employees earning above €69,300 (2024), self-employed individuals, civil servants, and students can opt for private health insurance."
+      },
+      {
+        id: "de-faq-2",
+        question: "Can I switch back to statutory insurance?",
+        answer: "Switching back is possible but restricted. Generally only possible if your income drops below the threshold or you become employed and earn less than the limit."
+      }
+    ],
+    onboardingLinks: [
+      {
+        id: "de-onboard-1",
+        title: "German Healthcare System Guide",
+        description: "Navigate the German healthcare system as an expat",
+        url: "/resources/germany-healthcare-guide"
+      },
+      {
+        id: "de-onboard-2",
+        title: "Private vs Statutory Insurance",
+        description: "Compare your options in the German system",
+        url: "/resources/germany-insurance-comparison"
       }
     ]
   },
@@ -362,6 +190,7 @@ export const countries: Country[] = [
     name: "Ireland",
     slug: "ireland",
     flag: "🇮🇪",
+    image: irelandImage,
     plans: [
       {
         id: "ie-plan-1",
@@ -406,190 +235,290 @@ export const countries: Country[] = [
     ]
   },
   {
-    name: "Denmark",
-    slug: "denmark",
-    flag: "🇩🇰",
+    name: "Italy",
+    slug: "italy",
+    flag: "🇮🇹",
+    image: italyImage,
     plans: [
       {
-        id: "dk-plan-1",
-        name: "Sundhedsforsikring",
+        id: "it-plan-1",
+        name: "Assicurazione Sanitaria",
         logo: "🏥",
-        description: "Private health insurance for faster treatment",
-        quoteUrl: "https://quote.kota.io/dk/private"
+        description: "Private health insurance to complement SSN",
+        quoteUrl: "https://quote.kota.io/it/private"
       },
       {
-        id: "dk-plan-2",
-        name: "Tandlægeforsikring",
-        logo: "🦷",
-        description: "Dental insurance for comprehensive coverage",
-        quoteUrl: "https://quote.kota.io/dk/dental"
-      }
-    ],
-    faqs: [
-      {
-        id: "dk-faq-1",
-        question: "Is healthcare free in Denmark?",
-        answer: "Yes, healthcare is free for residents through the tax-funded system. Private insurance provides faster access and choice of specialists."
-      },
-      {
-        id: "dk-faq-2",
-        question: "How do I register for Danish healthcare?",
-        answer: "Register with your municipality to get a yellow health card (sygesikringsbevis) and choose a GP (læge)."
-      }
-    ],
-    onboardingLinks: [
-      {
-        id: "dk-onboard-1",
-        title: "Danish Healthcare Registration",
-        description: "How to register and choose a GP",
-        url: "/resources/denmark-healthcare-registration"
-      },
-      {
-        id: "dk-onboard-2",
-        title: "Understanding Healthcare Groups",
-        description: "Group 1 vs Group 2 patients explained",
-        url: "/resources/denmark-healthcare-groups"
-      }
-    ]
-  },
-  {
-    name: "Sweden",
-    slug: "sweden",
-    flag: "🇸🇪",
-    plans: [
-      {
-        id: "se-plan-1",
-        name: "Privat Sjukförsäkring",
-        logo: "🏥",
-        description: "Private health insurance for quicker access",
-        quoteUrl: "https://quote.kota.io/se/private"
-      },
-      {
-        id: "se-plan-2",
-        name: "Företagshälsovård",
+        id: "it-plan-2",
+        name: "Fondo Sanitario",
         logo: "💼",
-        description: "Occupational healthcare services",
-        quoteUrl: "https://quote.kota.io/se/occupational"
+        description: "Corporate health funds for employees",
+        quoteUrl: "https://quote.kota.io/it/corporate"
       }
     ],
     faqs: [
       {
-        id: "se-faq-1",
-        question: "How does Swedish healthcare work?",
-        answer: "Healthcare is tax-funded and largely free. You pay small fees for GP visits and prescriptions, with annual caps on out-of-pocket costs."
+        id: "it-faq-1",
+        question: "Is private health insurance necessary in Italy?",
+        answer: "No, the SSN (Servizio Sanitario Nazionale) provides universal healthcare. Private insurance offers faster access and private facilities."
       },
       {
-        id: "se-faq-2",
-        question: "Why get private insurance in Sweden?",
-        answer: "Private insurance provides faster access to specialists, choice of doctors, and can include services not covered by public system."
+        id: "it-faq-2",
+        question: "How do I register for Italian healthcare?",
+        answer: "Register with your local ASL (Azienda Sanitaria Locale) to get a tessera sanitaria (health card) for access to public healthcare."
       }
     ],
     onboardingLinks: [
       {
-        id: "se-onboard-1",
-        title: "Swedish Healthcare Registration",
-        description: "Getting your personnummer and healthcare access",
-        url: "/resources/sweden-healthcare-registration"
+        id: "it-onboard-1",
+        title: "Italian Healthcare Registration",
+        description: "How to register with SSN",
+        url: "/resources/italy-healthcare-registration"
       },
       {
-        id: "se-onboard-2",
-        title: "Understanding Vårdcentralen",
-        description: "How to use Swedish healthcare centers",
-        url: "/resources/sweden-vardcentralen-guide"
+        id: "it-onboard-2",
+        title: "Understanding ASL Services",
+        description: "Navigate local health authorities",
+        url: "/resources/italy-asl-guide"
       }
     ]
   },
   {
-    name: "Norway",
-    slug: "norway",
-    flag: "🇳🇴",
+    name: "Luxembourg",
+    slug: "luxembourg",
+    flag: "🇱🇺",
+    image: luxembourgImage,
     plans: [
       {
-        id: "no-plan-1",
-        name: "Privat Helseforsikring",
+        id: "lu-plan-1",
+        name: "CNS Insurance",
         logo: "🏥",
-        description: "Private health insurance for faster treatment",
-        quoteUrl: "https://quote.kota.io/no/private"
+        description: "National Health Fund mandatory coverage",
+        quoteUrl: "https://quote.kota.io/lu/cns"
       },
       {
-        id: "no-plan-2",
-        name: "Tannhelseforsikring",
-        logo: "🦷",
-        description: "Dental insurance for adults",
-        quoteUrl: "https://quote.kota.io/no/dental"
+        id: "lu-plan-2",
+        name: "Complementary Insurance",
+        logo: "➕",
+        description: "Additional coverage for enhanced benefits",
+        quoteUrl: "https://quote.kota.io/lu/complementary"
       }
     ],
     faqs: [
       {
-        id: "no-faq-1",
-        question: "Is Norwegian healthcare free?",
-        answer: "Healthcare is largely free but with small co-payments. You have an annual deductible (egenandel) of around 2,000 NOK, after which most care is free."
+        id: "lu-faq-1",
+        question: "How does Luxembourg's healthcare system work?",
+        answer: "Luxembourg has a public health insurance system (CNS) that covers all residents. It's funded by contributions from employees, employers, and the state."
       },
       {
-        id: "no-faq-2",
-        question: "Do I need private insurance in Norway?",
-        answer: "No, but private insurance can provide faster access to specialists and avoid waiting times for non-urgent procedures."
+        id: "lu-faq-2",
+        question: "Do I need private insurance in Luxembourg?",
+        answer: "The CNS provides comprehensive coverage, but many residents choose complementary insurance for additional benefits like private rooms and alternative treatments."
       }
     ],
     onboardingLinks: [
       {
-        id: "no-onboard-1",
-        title: "Norwegian Healthcare Registration",
-        description: "Getting your national ID and healthcare rights",
-        url: "/resources/norway-healthcare-registration"
+        id: "lu-onboard-1",
+        title: "CNS Registration Guide",
+        description: "How to register with Luxembourg's health system",
+        url: "/resources/luxembourg-cns-registration"
       },
       {
-        id: "no-onboard-2",
-        title: "Understanding Fastlege",
-        description: "The Norwegian GP system explained",
-        url: "/resources/norway-fastlege-system"
+        id: "lu-onboard-2",
+        title: "Healthcare for Cross-Border Workers",
+        description: "Special provisions for cross-border employees",
+        url: "/resources/luxembourg-cross-border-healthcare"
       }
     ]
   },
   {
-    name: "Finland",
-    slug: "finland",
-    flag: "🇫🇮",
+    name: "Netherlands",
+    slug: "netherlands",
+    flag: "🇳🇱",
+    image: netherlandsImage,
     plans: [
       {
-        id: "fi-plan-1",
-        name: "Yksityinen Sairausvakuutus",
+        id: "nl-plan-1",
+        name: "Basisverzekering",
         logo: "🏥",
-        description: "Private health insurance for enhanced coverage",
-        quoteUrl: "https://quote.kota.io/fi/private"
+        description: "Mandatory basic health insurance for all residents",
+        quoteUrl: "https://quote.kota.io/nl/basic"
       },
       {
-        id: "fi-plan-2",
-        name: "Työterveyshuolto",
+        id: "nl-plan-2",
+        name: "Aanvullende Verzekering",
+        logo: "➕",
+        description: "Supplementary insurance for dental, physio, and extras",
+        quoteUrl: "https://quote.kota.io/nl/supplementary"
+      }
+    ],
+    faqs: [
+      {
+        id: "nl-faq-1",
+        question: "Is health insurance mandatory in the Netherlands?",
+        answer: "Yes, all residents must have basic health insurance (basisverzekering). You have 4 months to arrange this after becoming a resident."
+      },
+      {
+        id: "nl-faq-2",
+        question: "What's the difference between basic and supplementary insurance?",
+        answer: "Basic insurance covers essential medical care. Supplementary covers extras like dental care, physiotherapy, alternative medicine, and abroad coverage."
+      }
+    ],
+    onboardingLinks: [
+      {
+        id: "nl-onboard-1",
+        title: "Dutch Healthcare System Guide",
+        description: "Understanding mandatory health insurance",
+        url: "/resources/netherlands-healthcare-guide"
+      },
+      {
+        id: "nl-onboard-2",
+        title: "Choosing an Insurer",
+        description: "Compare Dutch health insurance providers",
+        url: "/resources/netherlands-insurer-comparison"
+      }
+    ]
+  },
+  {
+    name: "Portugal",
+    slug: "portugal",
+    flag: "🇵🇹",
+    image: portugalImage,
+    plans: [
+      {
+        id: "pt-plan-1",
+        name: "SNS Plus",
+        logo: "🏥",
+        description: "Private insurance to complement public healthcare",
+        quoteUrl: "https://quote.kota.io/pt/private"
+      },
+      {
+        id: "pt-plan-2",
+        name: "Seguro de Saúde",
         logo: "💼",
-        description: "Occupational healthcare coverage",
-        quoteUrl: "https://quote.kota.io/fi/occupational"
+        description: "Comprehensive private health insurance",
+        quoteUrl: "https://quote.kota.io/pt/comprehensive"
       }
     ],
     faqs: [
       {
-        id: "fi-faq-1",
-        question: "How does Finnish healthcare work?",
-        answer: "Finland has universal healthcare through Kela and municipal health centers. Private insurance provides faster access and additional services."
+        id: "pt-faq-1",
+        question: "How does Portugal's healthcare system work?",
+        answer: "Portugal has a public healthcare system (SNS) that provides free or low-cost healthcare to residents. Private insurance provides faster access and additional services."
       },
       {
-        id: "fi-faq-2",
-        question: "What is Kela and how do I register?",
-        answer: "Kela is the Social Insurance Institution that provides health insurance. Register when you get your Finnish personal identity code."
+        id: "pt-faq-2",
+        question: "Can I use public healthcare as an expat?",
+        answer: "EU citizens can access emergency care immediately. For full access, you need to register with local health center and get a health user number (número de utente)."
       }
     ],
     onboardingLinks: [
       {
-        id: "fi-onboard-1",
-        title: "Finnish Healthcare Registration",
-        description: "Registering with Kela and municipalities",
-        url: "/resources/finland-healthcare-registration"
+        id: "pt-onboard-1",
+        title: "SNS Registration Guide",
+        description: "How to register with Portuguese healthcare",
+        url: "/resources/portugal-sns-registration"
       },
       {
-        id: "fi-onboard-2",
-        title: "Understanding Terveyskeskus",
-        description: "How to use Finnish health centers",
-        url: "/resources/finland-health-centers"
+        id: "pt-onboard-2",
+        title: "Private Insurance Options",
+        description: "Understanding private healthcare in Portugal",
+        url: "/resources/portugal-private-insurance"
+      }
+    ]
+  },
+  {
+    name: "Spain",
+    slug: "spain",
+    flag: "🇪🇸",
+    image: spainImage,
+    plans: [
+      {
+        id: "es-plan-1",
+        name: "Seguro Médico Privado",
+        logo: "🏥",
+        description: "Private health insurance for faster access and choice",
+        quoteUrl: "https://quote.kota.io/es/private"
+      },
+      {
+        id: "es-plan-2",
+        name: "Seguro Dental",
+        logo: "🦷",
+        description: "Specialized dental coverage to complement public system",
+        quoteUrl: "https://quote.kota.io/es/dental"
+      }
+    ],
+    faqs: [
+      {
+        id: "es-faq-1",
+        question: "Do I need private insurance in Spain?",
+        answer: "No, public healthcare is excellent and free for residents. Private insurance provides faster access, private rooms, and choice of specialists."
+      },
+      {
+        id: "es-faq-2",
+        question: "How do I access public healthcare as an expat?",
+        answer: "EU citizens can use EHIC initially, then register for Tarjeta Sanitaria. Non-EU residents need to register with Social Security first."
+      }
+    ],
+    onboardingLinks: [
+      {
+        id: "es-onboard-1",
+        title: "Spanish Healthcare Registration",
+        description: "How to register for public healthcare",
+        url: "/resources/spain-healthcare-registration"
+      },
+      {
+        id: "es-onboard-2",
+        title: "Private vs Public Healthcare",
+        description: "Understanding your options in Spain",
+        url: "/resources/spain-healthcare-comparison"
+      }
+    ]
+  },
+  {
+    name: "United Kingdom",
+    slug: "uk",
+    flag: "🇬🇧",
+    image: ukImage,
+    plans: [
+      {
+        id: "uk-plan-1",
+        name: "NHS Plus Coverage",
+        logo: "🏥",
+        description: "Comprehensive private health insurance to complement NHS services",
+        quoteUrl: "https://quote.kota.io/uk/nhs-plus"
+      },
+      {
+        id: "uk-plan-2",
+        name: "Executive Health Plan",
+        logo: "⭐",
+        description: "Premium health coverage for executives and professionals",
+        quoteUrl: "https://quote.kota.io/uk/executive"
+      }
+    ],
+    faqs: [
+      {
+        id: "uk-faq-1",
+        question: "How does private insurance work with NHS?",
+        answer: "Private insurance complements NHS services by providing faster access to specialists, private rooms, and elective procedures while keeping NHS as your primary healthcare provider."
+      },
+      {
+        id: "uk-faq-2",
+        question: "What's typically covered in UK private health insurance?",
+        answer: "Most plans cover specialist consultations, diagnostic tests, surgery, cancer treatment, and mental health services. NHS emergency care remains free regardless."
+      }
+    ],
+    onboardingLinks: [
+      {
+        id: "uk-onboard-1",
+        title: "Understanding UK Healthcare System",
+        description: "Learn how private insurance works alongside NHS",
+        url: "/resources/uk-healthcare-guide"
+      },
+      {
+        id: "uk-onboard-2",
+        title: "Tax Benefits Guide",
+        description: "Understand tax implications of health insurance in the UK",
+        url: "/resources/uk-tax-benefits"
       }
     ]
   }

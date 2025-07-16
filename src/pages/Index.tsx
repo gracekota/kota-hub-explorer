@@ -62,6 +62,7 @@ const Index = () => {
                       name={country.name}
                       slug={country.slug}
                       flag={country.flag}
+                      image={country.image}
                     />
                   </div>
                 ))}

@@ -6,46 +6,46 @@
 
 @layer base {
   :root {
-    /* Professional insurance theme colors */
+    /* Kota Hub purple branding theme */
     --background: 0 0% 100%;
-    --foreground: 220 13% 18%;
+    --foreground: 240 10% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 13% 18%;
+    --card-foreground: 240 10% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 13% 18%;
+    --popover-foreground: 240 10% 15%;
 
-    /* Primary blue - trustworthy and professional */
-    --primary: 221 83% 53%;
+    /* Primary purple - Kota brand color */
+    --primary: 270 91% 65%;
     --primary-foreground: 0 0% 98%;
-    --primary-hover: 221 83% 48%;
-    --primary-light: 221 83% 96%;
+    --primary-hover: 270 91% 60%;
+    --primary-light: 270 91% 97%;
 
     /* Secondary grays for professional look */
-    --secondary: 220 14% 96%;
-    --secondary-foreground: 220 13% 18%;
+    --secondary: 240 5% 96%;
+    --secondary-foreground: 240 10% 15%;
 
-    --muted: 220 14% 96%;
-    --muted-foreground: 220 9% 46%;
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 4% 46%;
 
-    --accent: 212 100% 47%;
+    --accent: 280 100% 70%;
     --accent-foreground: 0 0% 98%;
-    --accent-light: 212 100% 96%;
+    --accent-light: 280 100% 97%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 221 83% 53%;
+    --border: 240 6% 90%;
+    --input: 240 6% 90%;
+    --ring: 270 91% 65%;
 
     --radius: 0.75rem;
 
     /* Custom design tokens */
     --hero-gradient: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
-    --card-shadow: 0 4px 6px -1px hsl(220 13% 18% / 0.1), 0 2px 4px -1px hsl(220 13% 18% / 0.06);
-    --card-shadow-hover: 0 10px 25px -3px hsl(220 13% 18% / 0.1), 0 4px 6px -2px hsl(220 13% 18% / 0.05);
+    --card-shadow: 0 4px 6px -1px hsl(240 10% 15% / 0.1), 0 2px 4px -1px hsl(240 10% 15% / 0.06);
+    --card-shadow-hover: 0 10px 25px -3px hsl(240 10% 15% / 0.1), 0 4px 6px -2px hsl(240 10% 15% / 0.05);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
