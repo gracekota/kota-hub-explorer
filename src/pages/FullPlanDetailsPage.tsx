@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 
 const FullPlanDetailsPage = () => {
   const { slug } = useParams();
+  console.log('FullPlanDetailsPage rendering with slug:', slug);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-primary/5 to-secondary/5">
