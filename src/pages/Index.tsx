@@ -2,7 +2,7 @@ import { useState, useMemo } from "react";
 import { CountryCard } from "@/components/CountryCard";
 import { SearchBar } from "@/components/SearchBar";
 import { countries } from "@/data/countries";
-import kotaLogo from "@/assets/kota-logo.png";
+import kotaLogo from "/lovable-uploads/8fe20a2f-db70-4778-a745-678b466b7a19.png";
 
 const Index = () => {
   const [searchTerm, setSearchTerm] = useState("");
