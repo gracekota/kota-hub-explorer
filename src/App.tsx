@@ -11,27 +11,31 @@ import FullPlanDetailsPage from "./pages/FullPlanDetailsPage";
 import BenefitsGlossaryPage from "./pages/BenefitsGlossaryPage";
 import WaitingPeriodsPage from "./pages/WaitingPeriodsPage";
 import NotFound from "./pages/NotFound";
+import Footer from "./components/Footer";
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/country/:slug" element={<CountryPage />} />
-          <Route path="/country/:slug/allianz-standard" element={<AllianzStandardPage />} />
-          <Route path="/country/:slug/allianz-standard/deductible" element={<DeductiblePage />} />
-          <Route path="/country/:slug/allianz-standard/full-plan-details" element={<FullPlanDetailsPage />} />
-          <Route path="/country/:slug/allianz-standard/benefits-glossary" element={<BenefitsGlossaryPage />} />
-          <Route path="/country/:slug/allianz-standard/waiting-periods" element={<WaitingPeriodsPage />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
+      <div className="min-h-screen flex flex-col">
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/country/:slug" element={<CountryPage />} />
+            <Route path="/country/:slug/allianz-standard" element={<AllianzStandardPage />} />
+            <Route path="/country/:slug/allianz-standard/deductible" element={<DeductiblePage />} />
+            <Route path="/country/:slug/allianz-standard/full-plan-details" element={<FullPlanDetailsPage />} />
+            <Route path="/country/:slug/allianz-standard/benefits-glossary" element={<BenefitsGlossaryPage />} />
+            <Route path="/country/:slug/allianz-standard/waiting-periods" element={<WaitingPeriodsPage />} />
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+          <Footer />
+        </BrowserRouter>
+      </div>
     </TooltipProvider>
   </QueryClientProvider>
 );
