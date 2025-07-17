@@ -41,12 +41,15 @@ const FullPlanDetailsPage = () => {
                 
                 <div className="bg-background p-4 rounded-lg border">
                   <h3 className="font-semibold mb-4">📋 Plan Documentation</h3>
-                  <div className="w-full border rounded-lg overflow-hidden">
-                    <iframe
-  src="/Allianz Standard Table of Benefits.pdf"
-  width="100%"
-  height="600px">
-</iframe>
+                  <div className="w-full border rounded-lg p-4">
+                    <a 
+                      href="/Allianz Standard Table of Benefits.pdf" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-primary hover:underline font-medium"
+                    >
+                      View Allianz Benefits PDF
+                    </a>
                   </div>
                 </div>
               </div>
