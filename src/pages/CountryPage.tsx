@@ -191,9 +191,9 @@ const CountryPage = () => {
                           </DialogHeader>
                           <div className="aspect-video">
                             <iframe
-                              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                              src="https://player.vimeo.com/video/YOUR_VIMEO_VIDEO_ID"
                               className="w-full h-full rounded-lg"
-                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                              allow="autoplay; fullscreen; picture-in-picture"
                               allowFullScreen
                             />
                           </div>
