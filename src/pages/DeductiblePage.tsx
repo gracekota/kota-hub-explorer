@@ -51,14 +51,14 @@ const DeductiblePage = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="bg-background border-2 border-dashed border-muted-foreground/30 rounded-lg p-12 text-center">
-                  <div className="text-muted-foreground">
-                    <div className="text-6xl mb-4">📹</div>
-                    <h3 className="text-lg font-semibold mb-2">Video embed placeholder</h3>
-                    <p className="text-sm text-muted-foreground/70">
-                      Replace this section with your video embed code
-                    </p>
-                  </div>
+                <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+                  <iframe 
+                    src="https://player.vimeo.com/video/1015186047?badge=0&autopause=0&player_id=0&app_id=58479" 
+                    frameBorder="0" 
+                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
+                    className="absolute top-0 left-0 w-full h-full rounded-lg"
+                    title="What is a deductible"
+                  />
                 </div>
               </CardContent>
             </Card>
