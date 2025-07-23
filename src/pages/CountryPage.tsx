@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { countries } from "@/data/countries";
 import kotaLogo from "/lovable-uploads/622d98ad-c491-4b82-84cf-25e56f7668e5.png";
 import remoteLogo from "@/assets/remote-logo.svg";
@@ -178,7 +179,7 @@ const CountryPage = () => {
                       <CardTitle className="text-lg">Why Choose Vitality?</CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <ul className="space-y-2 text-sm text-muted-foreground">
+                      <ul className="space-y-2 text-sm text-muted-foreground mb-4">
                         <li>• Unique wellness rewards program</li>
                         <li>• Discounts on gym memberships & healthy food</li>
                         <li>• Fast access to private medical care</li>
@@ -186,6 +187,26 @@ const CountryPage = () => {
                         <li>• Flexible coverage for individuals & families</li>
                         <li>• Health tracking through app & wearables</li>
                       </ul>
+                      <Dialog>
+                        <DialogTrigger asChild>
+                          <Button variant="outline" className="w-full">
+                            Watch Vitality Overview Video
+                          </Button>
+                        </DialogTrigger>
+                        <DialogContent className="max-w-4xl">
+                          <DialogHeader>
+                            <DialogTitle>Discover Vitality Health Insurance</DialogTitle>
+                          </DialogHeader>
+                          <div className="aspect-video">
+                            <iframe
+                              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                              className="w-full h-full rounded-lg"
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                              allowFullScreen
+                            />
+                          </div>
+                        </DialogContent>
+                      </Dialog>
                     </CardContent>
                   </Card>
                 </div>
