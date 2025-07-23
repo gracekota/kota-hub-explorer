@@ -1,14 +1,14 @@
 // Import country images
-import belgiumImage from "@/assets/belgium-bright.jpg";
-import franceImage from "@/assets/france-bright.jpg";
-import germanyImage from "@/assets/germany-bright.jpg";
-import irelandImage from "@/assets/ireland-bright.jpg";
-import italyImage from "@/assets/italy-bright.jpg";
-import luxembourgImage from "@/assets/luxembourg-bright.jpg";
-import netherlandsImage from "@/assets/netherlands-bright.jpg";
-import portugalImage from "@/assets/portugal-bright.jpg";
-import spainImage from "@/assets/spain-bright.jpg";
-import ukImage from "@/assets/uk-bright.jpg";
+import belgiumImage from "@/assets/belgium-grand-place.jpg";
+import franceImage from "@/assets/france-eiffel-tower.jpg";
+import germanyImage from "@/assets/germany-neuschwanstein.jpg";
+import irelandImage from "@/assets/ireland-cliffs-moher.jpg";
+import italyImage from "@/assets/italy-colosseum.jpg";
+import luxembourgImage from "@/assets/luxembourg-old-town.jpg";
+import netherlandsImage from "@/assets/netherlands-amsterdam-canals.jpg";
+import portugalImage from "@/assets/portugal-azulejo-tiles.jpg";
+import spainImage from "@/assets/spain-sagrada-familia.jpg";
+import ukImage from "@/assets/uk-big-ben.jpg";
 
 export interface Country {
   name: string;
