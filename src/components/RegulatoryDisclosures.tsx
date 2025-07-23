@@ -10,27 +10,27 @@ const RegulatoryDisclosures = () => {
     {
       title: "Terms of Business (EEA)",
       icon: FileText,
-      link: "#", // Replace with actual PDF link
+      link: "https://www.kota.io/regulatory/eu-terms-of-business",
     },
     {
       title: "Remuneration Document",
       icon: DollarSign,
-      link: "#", // Replace with actual PDF link
+      link: "https://www.kota.io/regulatory/remuneration",
     },
     {
       title: "Regulatory Disclosure",
       icon: Shield,
-      link: "#", // Replace with actual PDF link
+      link: "https://www.kota.io/regulatory",
     },
     {
       title: "Privacy Notice",
       icon: User,
-      link: "#", // Replace with actual PDF link
+      link: "https://www.kota.io/privacy-policy",
     },
     {
       title: "How to make a complaint",
       icon: MessageSquare,
-      link: "#", // Replace with actual PDF link
+      link: "https://help.kota.io/en/articles/8451469-how-do-i-make-a-complaint-to-kota",
     },
   ];
 
