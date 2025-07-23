@@ -20,7 +20,7 @@ const Index = () => {
               <img 
                 src={remoteLogo} 
                 alt="Remote Logo" 
-                className="h-8 w-auto"
+                className="h-8 w-auto filter brightness-0 invert"
               />
               <span className="text-2xl font-light text-primary-foreground/60">×</span>
               <img 
