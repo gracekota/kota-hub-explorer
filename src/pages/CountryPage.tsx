@@ -46,10 +46,11 @@ const CountryPage = () => {
                 alt="Kota Logo" 
                 className="h-8 w-auto"
               />
+              <span className="text-primary-foreground/60 text-sm font-medium">x</span>
               <img 
                 src={remoteLogo} 
                 alt="Remote Logo" 
-                className="h-8 w-auto"
+                className="h-8 w-auto brightness-0 invert"
               />
             </div>
           </div>
