@@ -1,20 +1,13 @@
-import { useState, useMemo } from "react";
 import { CountryCard } from "@/components/CountryCard";
 import { SearchBar } from "@/components/SearchBar";
+import { SearchResults } from "@/components/SearchResults";
+import { useHubSearch } from "@/hooks/useHubSearch";
 import { countries } from "@/data/countries";
 import kotaLogo from "/lovable-uploads/622d98ad-c491-4b82-84cf-25e56f7668e5.png";
 
 const Index = () => {
-  const [searchTerm, setSearchTerm] = useState("");
+  const { searchTerm, setSearchTerm, searchResults, hasResults, hasSearchTerm, clearSearch } = useHubSearch();
 
-  const filteredCountries = useMemo(() => {
-    if (!searchTerm) return countries;
-    
-    return countries.filter(country =>
-      country.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      country.slug.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-  }, [searchTerm]);
 
   return (
     <div className="min-h-screen bg-background">
@@ -48,19 +41,24 @@ const Index = () => {
           <SearchBar
             value={searchTerm}
             onChange={setSearchTerm}
-            placeholder="Search countries..."
+            placeholder="Search the hub..."
           />
         </div>
 
-        {/* Countries Grid */}
+        {/* Content Section */}
         <div className="animate-fade-in">
-          {filteredCountries.length > 0 ? (
+          {hasSearchTerm ? (
+            <SearchResults 
+              results={searchResults} 
+              searchTerm={searchTerm}
+            />
+          ) : (
             <>
               <h2 className="text-2xl font-semibold text-foreground mb-8 text-center">
-                {searchTerm ? `Search Results (${filteredCountries.length})` : 'Select Your Country'}
+                Select Your Country
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                {filteredCountries.map((country, index) => (
+                {countries.map((country, index) => (
                   <div 
                     key={country.slug}
                     className="animate-scale-in"
@@ -76,20 +74,6 @@ const Index = () => {
                 ))}
               </div>
             </>
-          ) : (
-            <div className="text-center py-12">
-              <div className="text-4xl mb-4">🔍</div>
-              <h3 className="text-xl font-semibold text-foreground mb-2">No countries found</h3>
-              <p className="text-muted-foreground">
-                Try adjusting your search term or{" "}
-                <button 
-                  onClick={() => setSearchTerm("")}
-                  className="text-primary hover:underline"
-                >
-                  clear the search
-                </button>
-              </p>
-            </div>
           )}
         </div>
       </div>
