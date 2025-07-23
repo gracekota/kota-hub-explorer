@@ -191,10 +191,11 @@ const CountryPage = () => {
                           </DialogHeader>
                           <div className="aspect-video">
                             <iframe
-                              src="https://player.vimeo.com/video/YOUR_VIMEO_VIDEO_ID"
+                              src="https://player.vimeo.com/video/1045155143?badge=0&autopause=0&player_id=0&app_id=58479"
                               className="w-full h-full rounded-lg"
-                              allow="autoplay; fullscreen; picture-in-picture"
+                              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
                               allowFullScreen
+                              title="Why Vitality"
                             />
                           </div>
                         </DialogContent>
