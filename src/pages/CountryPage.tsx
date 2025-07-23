@@ -168,78 +168,85 @@ const CountryPage = () => {
                             <DialogHeader>
                               <DialogTitle>Why Choose Allianz International Care?</DialogTitle>
                             </DialogHeader>
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-                              <div className="bg-card p-6 rounded-lg border">
-                                <div className="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center mb-4">
-                                  <span className="text-pink-600 text-xl">👤</span>
+                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-6">
+                              {/* Video Section - Left Side */}
+                              <div>
+                                <h3 className="font-semibold text-lg mb-4">Watch: Why Choose Allianz?</h3>
+                                <div style={{padding: '56.25% 0 0 0', position: 'relative'}}>
+                                  <iframe 
+                                    src="https://player.vimeo.com/video/1046828149?badge=0&autopause=0&player_id=0&app_id=58479" 
+                                    frameBorder="0" 
+                                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 
+                                    style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%'}} 
+                                    title="why_allianz_ (1080p)"
+                                  />
                                 </div>
-                                <h3 className="font-semibold text-lg mb-2">Customer-Centric Offerings</h3>
-                                <p className="text-muted-foreground text-sm">
-                                  Coverage is tailored to meet the real needs of their customers. They ensure that customers get the protection they want.
-                                </p>
                               </div>
                               
-                              <div className="bg-card p-6 rounded-lg border">
-                                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-                                  <span className="text-purple-600 text-xl">☂️</span>
+                              {/* Icons Grid - Right Side */}
+                              <div>
+                                <h3 className="font-semibold text-lg mb-4">Key Benefits</h3>
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                  <div className="bg-card p-4 rounded-lg border">
+                                    <div className="w-10 h-10 bg-pink-100 rounded-lg flex items-center justify-center mb-3">
+                                      <span className="text-pink-600 text-lg">👤</span>
+                                    </div>
+                                    <h4 className="font-semibold text-sm mb-2">Customer-Centric Offerings</h4>
+                                    <p className="text-muted-foreground text-xs">
+                                      Coverage tailored to meet real customer needs with protection they want.
+                                    </p>
+                                  </div>
+                                  
+                                  <div className="bg-card p-4 rounded-lg border">
+                                    <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center mb-3">
+                                      <span className="text-purple-600 text-lg">☂️</span>
+                                    </div>
+                                    <h4 className="font-semibold text-sm mb-2">Simple and Safe Coverage</h4>
+                                    <p className="text-muted-foreground text-xs">
+                                      Easy to understand health insurance with safety and simplicity prioritized.
+                                    </p>
+                                  </div>
+                                  
+                                  <div className="bg-card p-4 rounded-lg border">
+                                    <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center mb-3">
+                                      <span className="text-green-600 text-lg">🔍</span>
+                                    </div>
+                                    <h4 className="font-semibold text-sm mb-2">Top Financial Rating</h4>
+                                    <p className="text-muted-foreground text-xs">
+                                      AA+ rating from Standard & Poor's and Fitch for financial stability.
+                                    </p>
+                                  </div>
+                                  
+                                  <div className="bg-card p-4 rounded-lg border">
+                                    <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center mb-3">
+                                      <span className="text-purple-600 text-lg">📚</span>
+                                    </div>
+                                    <h4 className="font-semibold text-sm mb-2">Long-Standing Expertise</h4>
+                                    <p className="text-muted-foreground text-xs">
+                                      Founded in 1890, bringing deep trust and reliability as one of the world's oldest insurers.
+                                    </p>
+                                  </div>
+                                  
+                                  <div className="bg-card p-4 rounded-lg border">
+                                    <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mb-3">
+                                      <span className="text-blue-600 text-lg">📊</span>
+                                    </div>
+                                    <h4 className="font-semibold text-sm mb-2">Improving Quality of Life</h4>
+                                    <p className="text-muted-foreground text-xs">
+                                      Focused on enhancing customer quality of life by simplifying healthcare complexities.
+                                    </p>
+                                  </div>
+                                  
+                                  <div className="bg-card p-4 rounded-lg border">
+                                    <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center mb-3">
+                                      <span className="text-green-600 text-lg">🌍</span>
+                                    </div>
+                                    <h4 className="font-semibold text-sm mb-2">Global Presence</h4>
+                                    <p className="text-muted-foreground text-xs">
+                                      Serving 122+ million customers across 70 countries with global healthcare navigation.
+                                    </p>
+                                  </div>
                                 </div>
-                                <h3 className="font-semibold text-lg mb-2">Simple and Safe Coverage</h3>
-                                <p className="text-muted-foreground text-sm">
-                                  Allianz provides health insurance that is easy to understand. Their approach prioritizes safety and simplicity in coverage options.
-                                </p>
-                              </div>
-                              
-                              <div className="bg-card p-6 rounded-lg border">
-                                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-                                  <span className="text-green-600 text-xl">🔍</span>
-                                </div>
-                                <h3 className="font-semibold text-lg mb-2">Top Financial Rating</h3>
-                                <p className="text-muted-foreground text-sm">
-                                  Allianz holds an AA+ rating from Standard & Poor's and Fitch. This offers customers peace of mind about their financial stability.
-                                </p>
-                              </div>
-                              
-                              <div className="bg-card p-6 rounded-lg border">
-                                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-                                  <span className="text-purple-600 text-xl">📚</span>
-                                </div>
-                                <h3 className="font-semibold text-lg mb-2">Long-Standing Expertise</h3>
-                                <p className="text-muted-foreground text-sm">
-                                  Founded in 1890, Allianz is one of the world's oldest insurance providers. Their experience brings deep trust and reliability.
-                                </p>
-                              </div>
-                              
-                              <div className="bg-card p-6 rounded-lg border">
-                                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                                  <span className="text-blue-600 text-xl">📊</span>
-                                </div>
-                                <h3 className="font-semibold text-lg mb-2">Improving Quality of Life</h3>
-                                <p className="text-muted-foreground text-sm">
-                                  Focused on enhancing the quality of life for their customers. Simplifies the complexities of healthcare to offer better support.
-                                </p>
-                              </div>
-                              
-                              <div className="bg-card p-6 rounded-lg border">
-                                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-                                  <span className="text-green-600 text-xl">🌍</span>
-                                </div>
-                                <h3 className="font-semibold text-lg mb-2">Global Presence</h3>
-                                <p className="text-muted-foreground text-sm">
-                                  Allianz serves over 122 million customers across 70 countries. They help families, individuals, and employers navigate healthcare systems.
-                                </p>
-                              </div>
-                            </div>
-                            
-                            {/* Video Section */}
-                            <div className="mt-8">
-                              <div style={{padding: '56.25% 0 0 0', position: 'relative'}}>
-                                <iframe 
-                                  src="https://player.vimeo.com/video/1046828149?badge=0&autopause=0&player_id=0&app_id=58479" 
-                                  frameBorder="0" 
-                                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 
-                                  style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%'}} 
-                                  title="why_allianz_ (1080p)"
-                                />
                               </div>
                             </div>
                           </DialogContent>
