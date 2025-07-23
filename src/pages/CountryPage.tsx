@@ -97,36 +97,54 @@ const CountryPage = () => {
                   <div className="space-y-4">
                     {country.plans.filter(plan => plan.id.includes('allianz')).map((plan) => (
                       <div key={plan.id}>
-                        <Link to={`/country/${slug}/allianz-standard`}>
-                          <Card className="group hover:shadow-card-hover transition-all duration-300 cursor-pointer">
-                            <CardHeader className="pb-3">
-                              <div className="flex items-center space-x-3">
-                                <span className="text-xl">{plan.logo}</span>
-                                <div>
-                                  <CardTitle className="text-lg group-hover:text-primary transition-colors">{plan.name}</CardTitle>
-                                  <CardDescription className="text-sm">{plan.description}</CardDescription>
-                                </div>
+                        <Card className="group hover:shadow-card-hover transition-all duration-300">
+                          <CardHeader className="pb-3">
+                            <div className="flex items-center space-x-3">
+                              <span className="text-xl">{plan.logo}</span>
+                              <div>
+                                <CardTitle className="text-lg group-hover:text-primary transition-colors">{plan.name}</CardTitle>
+                                <CardDescription className="text-sm">{plan.description}</CardDescription>
                               </div>
-                            </CardHeader>
-                            <CardContent className="pt-0">
-                              <div className="flex space-x-2">
-                                <Button 
-                                  className="flex-1"
-                                  onClick={(e) => {
-                                    e.stopPropagation();
-                                    window.open(plan.quoteUrl, '_blank');
-                                  }}
-                                >
-                                  Get a Quote
-                                  <ExternalLink className="ml-2 h-4 w-4" />
-                                </Button>
-                                <Button variant="outline" className="flex-1">
+                            </div>
+                          </CardHeader>
+                          <CardContent className="pt-0">
+                            <div className="flex space-x-2 mb-3">
+                              <Button 
+                                className="flex-1"
+                                onClick={() => window.open(plan.quoteUrl, '_blank')}
+                              >
+                                Get a Quote
+                                <ExternalLink className="ml-2 h-4 w-4" />
+                              </Button>
+                              <Link to={`/country/${slug}/allianz-standard`} className="flex-1">
+                                <Button variant="outline" className="w-full">
                                   View Details
                                 </Button>
-                              </div>
-                            </CardContent>
-                          </Card>
-                        </Link>
+                              </Link>
+                            </div>
+                            <Dialog>
+                              <DialogTrigger asChild>
+                                <Button variant="outline" className="w-full">
+                                  Watch {plan.name} Video
+                                </Button>
+                              </DialogTrigger>
+                              <DialogContent className="max-w-4xl">
+                                <DialogHeader>
+                                  <DialogTitle>{plan.name} Overview</DialogTitle>
+                                </DialogHeader>
+                                <div className="aspect-video">
+                                  <iframe
+                                    src="https://player.vimeo.com/video/YOUR_VIDEO_ID_HERE"
+                                    className="w-full h-full rounded-lg"
+                                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                                    allowFullScreen
+                                    title={`${plan.name} Video`}
+                                  />
+                                </div>
+                              </DialogContent>
+                            </Dialog>
+                          </CardContent>
+                        </Card>
                       </div>
                     ))}
                   </div>
