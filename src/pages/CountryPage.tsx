@@ -179,14 +179,6 @@ const CountryPage = () => {
                       <CardTitle className="text-lg">Why Choose Vitality?</CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <ul className="space-y-2 text-sm text-muted-foreground mb-4">
-                        <li>• Unique wellness rewards program</li>
-                        <li>• Discounts on gym memberships & healthy food</li>
-                        <li>• Fast access to private medical care</li>
-                        <li>• Mental health support programs</li>
-                        <li>• Flexible coverage for individuals & families</li>
-                        <li>• Health tracking through app & wearables</li>
-                      </ul>
                       <Dialog>
                         <DialogTrigger asChild>
                           <Button variant="outline" className="w-full">
