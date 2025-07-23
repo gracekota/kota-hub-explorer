@@ -109,13 +109,6 @@ export const countries: Country[] = [
         logo: "🏥",
         description: "Enhanced coverage with additional benefits and higher limits",
         quoteUrl: "https://quote.kota.io/fr/allianz-premium"
-      },
-      {
-        id: "fr-allianz-core",
-        name: "Allianz International Care - Core",
-        logo: "🏥",
-        description: "Essential international health coverage with core benefits",
-        quoteUrl: "https://quote.kota.io/fr/allianz-core"
       }
     ],
     faqs: [
