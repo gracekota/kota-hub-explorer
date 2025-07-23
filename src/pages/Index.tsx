@@ -18,15 +18,15 @@ const Index = () => {
           <div className="animate-fade-in">
             <div className="mb-6 flex items-center justify-center gap-4">
               <img 
-                src={remoteLogo} 
-                alt="Remote Logo" 
-                className="h-8 w-auto filter brightness-0 invert"
-              />
-              <span className="text-2xl font-light text-primary-foreground/60">×</span>
-              <img 
                 src={kotaLogo} 
                 alt="Kota Logo" 
                 className="h-10 w-auto"
+              />
+              <span className="text-2xl font-light text-primary-foreground/60">×</span>
+              <img 
+                src={remoteLogo} 
+                alt="Remote Logo" 
+                className="h-8 w-auto filter brightness-0 invert"
               />
             </div>
             <h1 className="text-5xl font-bold mb-4">The Kota Hub</h1>
