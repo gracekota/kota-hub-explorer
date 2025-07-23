@@ -30,10 +30,6 @@ const Index = () => {
               />
             </div>
             <h1 className="text-5xl font-bold mb-4">The Kota Hub</h1>
-            <p className="text-lg text-primary-foreground/90 mb-8 max-w-3xl mx-auto">
-              Health plans are country-specific. If you have employees in several countries, you will need to set up a plan for each country.
-              Select a country to know more about the available plans and related frequently asked questions.
-            </p>
           </div>
         </div>
       </div>
@@ -58,9 +54,13 @@ const Index = () => {
             />
           ) : (
             <>
-              <h2 className="text-2xl font-semibold text-foreground mb-8 text-center">
+              <h2 className="text-2xl font-semibold text-foreground mb-4 text-center">
                 Select Your Country
               </h2>
+              <p className="text-center text-muted-foreground mb-8 max-w-3xl mx-auto">
+                Health plans are country-specific. If you have employees in several countries, you will need to set up a plan for each country.
+                Select a country to know more about the available plans and related frequently asked questions.
+              </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 {countries.map((country, index) => (
                   <div 
