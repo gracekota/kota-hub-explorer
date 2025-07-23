@@ -6,6 +6,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { countries } from "@/data/countries";
 import kotaLogo from "/lovable-uploads/622d98ad-c491-4b82-84cf-25e56f7668e5.png";
+import allianzLogo from "@/assets/allianz-logo.png";
+import vitalityLogo from "@/assets/vitality-logo.png";
 
 const CountryPage = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -68,8 +70,15 @@ const CountryPage = () => {
               <div className="grid gap-8 lg:grid-cols-2">
                 {/* Allianz Section */}
                 <div className="space-y-6">
-                  <div className="text-center space-y-4">
-                    <h2 className="text-2xl font-bold text-foreground">Allianz International Care</h2>
+                   <div className="text-center space-y-4">
+                     <div className="flex items-center justify-center gap-3">
+                       <img 
+                         src={allianzLogo} 
+                         alt="Allianz Logo" 
+                         className="h-8 w-auto object-contain"
+                       />
+                       <h2 className="text-2xl font-bold text-foreground">Allianz International Care</h2>
+                     </div>
                     <p className="text-muted-foreground">
                       Comprehensive international health insurance with global coverage and peace of mind.
                     </p>
@@ -116,8 +125,15 @@ const CountryPage = () => {
 
                 {/* Vitality Section */}
                 <div className="space-y-6">
-                  <div className="text-center space-y-4">
-                    <h2 className="text-2xl font-bold text-foreground">Vitality Health Insurance</h2>
+                   <div className="text-center space-y-4">
+                     <div className="flex items-center justify-center gap-3">
+                       <img 
+                         src={vitalityLogo} 
+                         alt="Vitality Logo" 
+                         className="h-8 w-auto object-contain"
+                       />
+                       <h2 className="text-2xl font-bold text-foreground">Vitality Health Insurance</h2>
+                     </div>
                     <p className="text-muted-foreground">
                       Innovative health insurance that rewards healthy living with comprehensive coverage.
                     </p>
