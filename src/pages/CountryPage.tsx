@@ -151,6 +151,89 @@ const CountryPage = () => {
                     ))}
                   </div>
 
+                  {/* Why Choose Allianz - France only */}
+                  {country.slug === 'france' && (
+                    <Card className="bg-muted/50">
+                      <CardHeader>
+                        <CardTitle className="text-lg">Why Choose Allianz?</CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <Dialog>
+                          <DialogTrigger asChild>
+                            <Button variant="outline" className="w-full">
+                              Discover Allianz International Care
+                            </Button>
+                          </DialogTrigger>
+                          <DialogContent className="max-w-6xl">
+                            <DialogHeader>
+                              <DialogTitle>Why Choose Allianz International Care?</DialogTitle>
+                            </DialogHeader>
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+                              <div className="bg-card p-6 rounded-lg border">
+                                <div className="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center mb-4">
+                                  <span className="text-pink-600 text-xl">👤</span>
+                                </div>
+                                <h3 className="font-semibold text-lg mb-2">Customer-Centric Offerings</h3>
+                                <p className="text-muted-foreground text-sm">
+                                  Coverage is tailored to meet the real needs of their customers. They ensure that customers get the protection they want.
+                                </p>
+                              </div>
+                              
+                              <div className="bg-card p-6 rounded-lg border">
+                                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                                  <span className="text-purple-600 text-xl">☂️</span>
+                                </div>
+                                <h3 className="font-semibold text-lg mb-2">Simple and Safe Coverage</h3>
+                                <p className="text-muted-foreground text-sm">
+                                  Allianz provides health insurance that is easy to understand. Their approach prioritizes safety and simplicity in coverage options.
+                                </p>
+                              </div>
+                              
+                              <div className="bg-card p-6 rounded-lg border">
+                                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                                  <span className="text-green-600 text-xl">🔍</span>
+                                </div>
+                                <h3 className="font-semibold text-lg mb-2">Top Financial Rating</h3>
+                                <p className="text-muted-foreground text-sm">
+                                  Allianz holds an AA+ rating from Standard & Poor's and Fitch. This offers customers peace of mind about their financial stability.
+                                </p>
+                              </div>
+                              
+                              <div className="bg-card p-6 rounded-lg border">
+                                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                                  <span className="text-purple-600 text-xl">📚</span>
+                                </div>
+                                <h3 className="font-semibold text-lg mb-2">Long-Standing Expertise</h3>
+                                <p className="text-muted-foreground text-sm">
+                                  Founded in 1890, Allianz is one of the world's oldest insurance providers. Their experience brings deep trust and reliability.
+                                </p>
+                              </div>
+                              
+                              <div className="bg-card p-6 rounded-lg border">
+                                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                                  <span className="text-blue-600 text-xl">📊</span>
+                                </div>
+                                <h3 className="font-semibold text-lg mb-2">Improving Quality of Life</h3>
+                                <p className="text-muted-foreground text-sm">
+                                  Focused on enhancing the quality of life for their customers. Simplifies the complexities of healthcare to offer better support.
+                                </p>
+                              </div>
+                              
+                              <div className="bg-card p-6 rounded-lg border">
+                                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                                  <span className="text-green-600 text-xl">🌍</span>
+                                </div>
+                                <h3 className="font-semibold text-lg mb-2">Global Presence</h3>
+                                <p className="text-muted-foreground text-sm">
+                                  Allianz serves over 122 million customers across 70 countries. They help families, individuals, and employers navigate healthcare systems.
+                                </p>
+                              </div>
+                            </div>
+                          </DialogContent>
+                        </Dialog>
+                      </CardContent>
+                    </Card>
+                  )}
                 </div>
 
                 {/* Vitality Section - UK only */}
