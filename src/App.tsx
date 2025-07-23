@@ -12,6 +12,7 @@ import BenefitsGlossaryPage from "./pages/BenefitsGlossaryPage";
 import WaitingPeriodsPage from "./pages/WaitingPeriodsPage";
 import NotFound from "./pages/NotFound";
 import Footer from "./components/Footer";
+import RegulatoryDisclosures from "./components/RegulatoryDisclosures";
 
 const queryClient = new QueryClient();
 
@@ -33,6 +34,7 @@ const App = () => (
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
+          <RegulatoryDisclosures />
           <Footer />
         </BrowserRouter>
       </div>
