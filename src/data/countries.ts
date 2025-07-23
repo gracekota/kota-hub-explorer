@@ -97,18 +97,25 @@ export const countries: Country[] = [
     image: franceImage,
     plans: [
       {
-        id: "fr-plan-1",
-        name: "Mutuelle Santé",
+        id: "fr-allianz-standard",
+        name: "Allianz International Care - Standard",
         logo: "🏥",
-        description: "Complementary health insurance to enhance Sécurité Sociale",
-        quoteUrl: "https://quote.kota.io/fr/mutuelle"
+        description: "Comprehensive international health insurance with global coverage",
+        quoteUrl: "https://quote.kota.io/fr/allianz-standard"
       },
       {
-        id: "fr-plan-2",
-        name: "International Expat Plan",
-        logo: "🌍",
-        description: "Comprehensive coverage for international residents",
-        quoteUrl: "https://quote.kota.io/fr/expat"
+        id: "fr-allianz-premium",
+        name: "Allianz International Care - Premium",
+        logo: "🏥",
+        description: "Enhanced coverage with additional benefits and higher limits",
+        quoteUrl: "https://quote.kota.io/fr/allianz-premium"
+      },
+      {
+        id: "fr-allianz-core",
+        name: "Allianz International Care - Core",
+        logo: "🏥",
+        description: "Essential international health coverage with core benefits",
+        quoteUrl: "https://quote.kota.io/fr/allianz-core"
       }
     ],
     faqs: [

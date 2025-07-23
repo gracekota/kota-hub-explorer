@@ -75,9 +75,9 @@ const CountryPage = () => {
           </TabsList>
 
           <TabsContent value="plans" className="space-y-8">
-            {/* UK-specific content with providers side by side */}
-            {country.slug === 'uk' ? (
-              <div className="grid gap-8 lg:grid-cols-2">
+            {/* UK and France-specific content with providers side by side */}
+            {(country.slug === 'uk' || country.slug === 'france') ? (
+              <div className={country.slug === 'uk' ? 'grid gap-8 lg:grid-cols-2' : 'space-y-8'}>
                 {/* Allianz Section */}
                 <div className="space-y-6">
                    <div className="text-center space-y-4">
@@ -116,11 +116,13 @@ const CountryPage = () => {
                                 Get a Quote
                                 <ExternalLink className="ml-2 h-4 w-4" />
                               </Button>
-                              <Link to={`/country/${slug}/allianz-standard`} className="flex-1">
-                                <Button variant="outline" className="w-full">
-                                  View Details
-                                </Button>
-                              </Link>
+                              {country.slug === 'uk' && (
+                                <Link to={`/country/${slug}/allianz-standard`} className="flex-1">
+                                  <Button variant="outline" className="w-full">
+                                    View Details
+                                  </Button>
+                                </Link>
+                              )}
                             </div>
                             <Dialog>
                               <DialogTrigger asChild>
@@ -151,7 +153,8 @@ const CountryPage = () => {
 
                 </div>
 
-                {/* Vitality Section */}
+                {/* Vitality Section - UK only */}
+                {country.slug === 'uk' && (
                 <div className="space-y-6">
                    <div className="text-center space-y-4">
                      <div className="flex items-center justify-center gap-3">
@@ -244,6 +247,7 @@ const CountryPage = () => {
                     </CardContent>
                   </Card>
                 </div>
+                )}
               </div>
             ) : (
               // Default layout for other countries
