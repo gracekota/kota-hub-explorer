@@ -180,13 +180,36 @@ const CountryPage = () => {
                           </div>
                         </CardHeader>
                         <CardContent className="pt-0">
-                          <Button 
-                            className="w-full"
-                            onClick={() => window.open(plan.quoteUrl, '_blank')}
-                          >
-                            Get a Quote
-                            <ExternalLink className="ml-2 h-4 w-4" />
-                          </Button>
+                          <div className="flex space-x-2 mb-3">
+                            <Button 
+                              className="flex-1"
+                              onClick={() => window.open(plan.quoteUrl, '_blank')}
+                            >
+                              Get a Quote
+                              <ExternalLink className="ml-2 h-4 w-4" />
+                            </Button>
+                          </div>
+                          <Dialog>
+                            <DialogTrigger asChild>
+                              <Button variant="outline" className="w-full">
+                                Watch {plan.name} Video
+                              </Button>
+                            </DialogTrigger>
+                            <DialogContent className="max-w-4xl">
+                              <DialogHeader>
+                                <DialogTitle>{plan.name} Overview</DialogTitle>
+                              </DialogHeader>
+                              <div className="aspect-video">
+                                <iframe
+                                  src="https://player.vimeo.com/video/YOUR_VIDEO_ID_HERE"
+                                  className="w-full h-full rounded-lg"
+                                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                                  allowFullScreen
+                                  title={`${plan.name} Video`}
+                                />
+                              </div>
+                            </DialogContent>
+                          </Dialog>
                         </CardContent>
                       </Card>
                     ))}
