@@ -23,16 +23,9 @@ const Index = () => {
               />
             </div>
             <h1 className="text-5xl font-bold mb-4">The Kota Hub</h1>
-            <p className="text-xl text-primary-foreground/90 mb-6 max-w-2xl mx-auto">
-              Get region-specific benefits & insurance info
-            </p>
             <p className="text-lg text-primary-foreground/90 mb-8 max-w-3xl mx-auto">
               Health plans are country-specific. If you have employees in several countries, you will need to set up a plan for each country.
               Select a country to know more about the available plans and related frequently asked questions.
-            </p>
-            <p className="text-lg text-primary-foreground/80 max-w-3xl mx-auto">
-              Your comprehensive guide to healthcare and insurance across Europe. 
-              Find country-specific information, compare plans, and get expert guidance for your healthcare journey.
             </p>
           </div>
         </div>
