@@ -169,23 +169,8 @@ const CountryPage = () => {
                               <DialogTitle>Why Choose Allianz International Care?</DialogTitle>
                             </DialogHeader>
                             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-6">
-                              {/* Video Section - Left Side */}
+                              {/* Icons Grid - Left Side */}
                               <div>
-                                <h3 className="font-semibold text-lg mb-4">Watch: Why Choose Allianz?</h3>
-                                <div style={{padding: '56.25% 0 0 0', position: 'relative'}}>
-                                  <iframe 
-                                    src="https://player.vimeo.com/video/1046828149?badge=0&autopause=0&player_id=0&app_id=58479" 
-                                    frameBorder="0" 
-                                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 
-                                    style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%'}} 
-                                    title="why_allianz_ (1080p)"
-                                  />
-                                </div>
-                              </div>
-                              
-                              {/* Icons Grid - Right Side */}
-                              <div>
-                                <h3 className="font-semibold text-lg mb-4">Key Benefits</h3>
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                   <div className="bg-card p-4 rounded-lg border">
                                     <div className="w-10 h-10 bg-pink-100 rounded-lg flex items-center justify-center mb-3">
@@ -246,6 +231,19 @@ const CountryPage = () => {
                                       Serving 122+ million customers across 70 countries with global healthcare navigation.
                                     </p>
                                   </div>
+                                </div>
+                              </div>
+                              
+                              {/* Video Section - Right Side */}
+                              <div>
+                                <div style={{padding: '56.25% 0 0 0', position: 'relative'}}>
+                                  <iframe 
+                                    src="https://player.vimeo.com/video/1046828149?badge=0&autopause=0&player_id=0&app_id=58479" 
+                                    frameBorder="0" 
+                                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 
+                                    style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%'}} 
+                                    title="why_allianz_ (1080p)"
+                                  />
                                 </div>
                               </div>
                             </div>
