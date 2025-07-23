@@ -4,6 +4,7 @@ import { SearchResults } from "@/components/SearchResults";
 import { useHubSearch } from "@/hooks/useHubSearch";
 import { countries } from "@/data/countries";
 import kotaLogo from "/lovable-uploads/622d98ad-c491-4b82-84cf-25e56f7668e5.png";
+import remoteLogo from "@/assets/remote-logo.svg";
 
 const Index = () => {
   const { searchTerm, setSearchTerm, searchResults, hasResults, hasSearchTerm, clearSearch } = useHubSearch();
@@ -15,11 +16,17 @@ const Index = () => {
       <div className="bg-gradient-to-br from-primary via-primary to-accent text-primary-foreground">
         <div className="container mx-auto px-6 py-16 text-center">
           <div className="animate-fade-in">
-            <div className="mb-6">
+            <div className="mb-6 flex items-center justify-center gap-4">
+              <img 
+                src={remoteLogo} 
+                alt="Remote Logo" 
+                className="h-8 w-auto"
+              />
+              <span className="text-2xl font-light text-primary-foreground/60">×</span>
               <img 
                 src={kotaLogo} 
                 alt="Kota Logo" 
-                className="mx-auto h-12 w-auto mb-4"
+                className="h-10 w-auto"
               />
             </div>
             <h1 className="text-5xl font-bold mb-4">The Kota Hub</h1>
