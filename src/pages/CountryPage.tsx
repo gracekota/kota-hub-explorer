@@ -6,6 +6,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { countries } from "@/data/countries";
 import kotaLogo from "/lovable-uploads/622d98ad-c491-4b82-84cf-25e56f7668e5.png";
+import remoteLogo from "@/assets/remote-logo.svg";
 import allianzLogo from "@/assets/allianz-logo.png";
 import vitalityLogo from "@/assets/vitality-logo.png";
 
@@ -39,11 +40,18 @@ const CountryPage = () => {
               <ArrowLeft className="mr-2 h-4 w-4" />
               Back to The Kota Hub
             </Link>
-            <img 
-              src={kotaLogo} 
-              alt="Kota Logo" 
-              className="h-8 w-auto"
-            />
+            <div className="flex items-center space-x-3">
+              <img 
+                src={kotaLogo} 
+                alt="Kota Logo" 
+                className="h-8 w-auto"
+              />
+              <img 
+                src={remoteLogo} 
+                alt="Remote Logo" 
+                className="h-8 w-auto"
+              />
+            </div>
           </div>
           <div className="flex items-center space-x-4 animate-fade-in">
             <span className="text-4xl">{country.flag}</span>
