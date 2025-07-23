@@ -30,6 +30,7 @@ const Index = () => {
               />
             </div>
             <h1 className="text-5xl font-bold mb-4">The Kota Hub</h1>
+            <p className="text-xl text-primary-foreground/90 mb-8">Your Health Insurance Guide</p>
           </div>
         </div>
       </div>
