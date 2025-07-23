@@ -164,7 +164,7 @@ const CountryPage = () => {
                               Discover Allianz International Care
                             </Button>
                           </DialogTrigger>
-                          <DialogContent className="max-w-6xl">
+                          <DialogContent className="max-w-7xl max-h-[90vh] overflow-y-auto">
                             <DialogHeader>
                               <DialogTitle>Why Choose Allianz International Care?</DialogTitle>
                             </DialogHeader>
