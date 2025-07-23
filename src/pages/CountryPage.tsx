@@ -7,8 +7,8 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { countries } from "@/data/countries";
 import kotaLogo from "/lovable-uploads/622d98ad-c491-4b82-84cf-25e56f7668e5.png";
 import remoteLogo from "@/assets/remote-logo.svg";
-import allianzLogo from "@/assets/allianz-logo.png";
-import vitalityLogo from "@/assets/vitality-logo.png";
+import allianzLogo from "/lovable-uploads/4ea41930-dc74-46d1-ba35-de66c0890f02.png";
+import vitalityLogo from "/lovable-uploads/76278ac1-b610-4a59-9eda-a816e35b05f5.png";
 
 const CountryPage = () => {
   const { slug } = useParams<{ slug: string }>();
