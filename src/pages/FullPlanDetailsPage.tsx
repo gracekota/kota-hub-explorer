@@ -48,7 +48,7 @@ const FullPlanDetailsPage = () => {
                   <h3 className="font-semibold mb-4">📋 {planTypeTitle} Plan Documentation</h3>
                   <div className="w-full border rounded-lg p-4">
                     <a 
-                      href="/Allianz%20Standard%20Table%20of%20Benefits.pdf"
+                      href={isPremium ? "/Allianz%20Premium%20Table%20of%20Benefits%20(1).pdf" : "/Allianz%20Standard%20Table%20of%20Benefits.pdf"}
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="text-primary hover:underline font-medium"
