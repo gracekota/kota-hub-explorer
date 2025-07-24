@@ -1,10 +1,16 @@
 import { ArrowLeft } from "lucide-react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 const AllianzStandardPage = () => {
   const { slug } = useParams();
+  const location = useLocation();
+  const isPremium = location.pathname.includes('/allianz-premium');
+  const planType = isPremium ? 'premium' : 'standard';
+  const planTypeTitle = isPremium ? 'Premium' : 'Standard';
+  
+  console.log('AllianzStandardPage - pathname:', location.pathname, 'isPremium:', isPremium, 'planType:', planType);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-primary/5 to-secondary/5">
@@ -18,9 +24,9 @@ const AllianzStandardPage = () => {
           </Link>
 
           <div className="mb-8">
-            <h1 className="text-4xl font-bold mb-2">Allianz International Care - Standard</h1>
+            <h1 className="text-4xl font-bold mb-2">Allianz International Care - {planTypeTitle}</h1>
             <p className="text-lg text-muted-foreground">
-              Comprehensive international health insurance coverage
+              {isPremium ? 'Enhanced coverage with additional benefits and higher limits' : 'Comprehensive international health insurance coverage'}
             </p>
           </div>
 
@@ -33,7 +39,7 @@ const AllianzStandardPage = () => {
             </CardHeader>
             <CardContent>
               <div className="grid grid-cols-2 gap-4">
-                <Link to={`/country/${slug}/allianz-standard/deductible`}>
+                <Link to={`/country/${slug}/allianz-${planType}/deductible`}>
                   <div className="flex items-center space-x-3 p-3 bg-background rounded-lg border hover:shadow-md transition-shadow cursor-pointer">
                     <div className="p-2 bg-red-100 rounded-lg">
                       <span className="text-red-600 font-bold">£</span>
@@ -45,7 +51,7 @@ const AllianzStandardPage = () => {
                   </div>
                 </Link>
                 
-                <Link to={`/country/${slug}/allianz-standard/full-plan-details`}>
+                <Link to={`/country/${slug}/allianz-${planType}/full-plan-details`}>
                   <div className="flex items-center space-x-3 p-3 bg-background rounded-lg border hover:shadow-md transition-shadow cursor-pointer">
                     <div className="p-2 bg-purple-100 rounded-lg">
                       <span className="text-purple-600 font-bold">📋</span>
@@ -57,7 +63,7 @@ const AllianzStandardPage = () => {
                   </div>
                 </Link>
                 
-                <Link to={`/country/${slug}/allianz-standard/benefits-glossary`}>
+                <Link to={`/country/${slug}/allianz-${planType}/benefits-glossary`}>
                   <div className="flex items-center space-x-3 p-3 bg-background rounded-lg border hover:shadow-md transition-shadow cursor-pointer">
                     <div className="p-2 bg-teal-100 rounded-lg">
                       <span className="text-teal-600 font-bold">📊</span>
@@ -69,7 +75,7 @@ const AllianzStandardPage = () => {
                   </div>
                 </Link>
                 
-                <Link to={`/country/${slug}/allianz-standard/waiting-periods`}>
+                <Link to={`/country/${slug}/allianz-${planType}/waiting-periods`}>
                   <div className="flex items-center space-x-3 p-3 bg-background rounded-lg border hover:shadow-md transition-shadow cursor-pointer">
                     <div className="p-2 bg-blue-100 rounded-lg">
                       <span className="text-blue-600 font-bold">🕐</span>
