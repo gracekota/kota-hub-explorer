@@ -130,12 +130,10 @@ const CountryPage = () => {
                             {/* Pricing Display */}
                             {showPricing[plan.id] && (
                               <div className="bg-gradient-to-br from-purple-600 to-purple-800 rounded-lg p-6 mb-4 text-white">
-                                <div className="flex items-center justify-between mb-4">
-                                  <div className="flex items-center gap-2">
+                                <div className="flex items-center justify-between mb-6">
+                                  <div>
                                     <span className="text-lg font-bold">{plan.name}</span>
-                                    <span className="bg-purple-400/30 px-2 py-1 rounded-full text-xs font-medium">
-                                      Annual cost
-                                    </span>
+                                    <div className="text-purple-200 text-sm mt-1">Annual pricing</div>
                                   </div>
                                   <button 
                                     onClick={() => togglePricing(plan.id)}
@@ -147,29 +145,23 @@ const CountryPage = () => {
                                 
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                   <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                                    <div className="text-purple-200 text-sm font-medium mb-2">Per Adult</div>
-                                    <div className="text-2xl font-bold">
-                                      {plan.id.includes('premium') ? '€1729.23' : '€1356.03'}
-                                      <span className="text-lg font-normal text-purple-200 ml-1">
-                                        / {plan.id.includes('premium') ? '£1470.77' : '£1153.21'}
-                                      </span>
+                                    <div className="text-purple-200 text-sm font-medium mb-3">Per Adult</div>
+                                    <div className="text-xl font-bold">
+                                      €{plan.id.includes('premium') ? '1729.23' : '1356.03'}
+                                    </div>
+                                    <div className="text-xl font-bold mt-1">
+                                      £{plan.id.includes('premium') ? '1470.77' : '1153.21'}
                                     </div>
                                   </div>
                                   
                                   <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                                    <div className="text-purple-200 text-sm font-medium mb-2">Per Child</div>
-                                    <div className="text-2xl font-bold">
-                                      {plan.id.includes('premium') ? '€1383.85' : '€1084.82'}
-                                      <span className="text-lg font-normal text-purple-200 ml-1">
-                                        / {plan.id.includes('premium') ? '£1176.39' : '£922.56'}
-                                      </span>
+                                    <div className="text-purple-200 text-sm font-medium mb-3">Per Child</div>
+                                    <div className="text-xl font-bold">
+                                      €{plan.id.includes('premium') ? '1383.85' : '1084.82'}
                                     </div>
-                                  </div>
-                                </div>
-                                
-                                <div className="mt-4 text-center">
-                                  <div className="text-purple-200 text-sm">
-                                    Fixed pricing • No quotes needed • Ready to enroll
+                                    <div className="text-xl font-bold mt-1">
+                                      £{plan.id.includes('premium') ? '1176.39' : '922.56'}
+                                    </div>
                                   </div>
                                 </div>
                               </div>
