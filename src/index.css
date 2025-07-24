@@ -16,11 +16,11 @@
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 15%;
 
-    /* Primary purple - Kota brand color */
-    --primary: 270 91% 65%;
+    /* Primary - Company brand color #814FE6 */
+    --primary: 262 74% 61%;
     --primary-foreground: 0 0% 98%;
-    --primary-hover: 270 91% 60%;
-    --primary-light: 270 91% 97%;
+    --primary-hover: 262 74% 56%;
+    --primary-light: 262 74% 97%;
 
     /* Secondary grays for professional look */
     --secondary: 240 5% 96%;
@@ -29,16 +29,16 @@
     --muted: 240 5% 96%;
     --muted-foreground: 240 4% 46%;
 
-    --accent: 280 100% 70%;
+    --accent: 262 74% 70%;
     --accent-foreground: 0 0% 98%;
-    --accent-light: 280 100% 97%;
+    --accent-light: 262 74% 97%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
     --border: 240 6% 90%;
     --input: 240 6% 90%;
-    --ring: 270 91% 65%;
+    --ring: 262 74% 61%;
 
     --radius: 0.75rem;
 
