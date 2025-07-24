@@ -40,7 +40,7 @@ const RegulatoryDisclosures = () => {
     countrySpecificDisclosures.push({
       title: "Terms of Business (UK)",
       icon: FileText,
-      link: "#", // Replace with actual PDF link
+      link: "https://www.kota.io/regulatory/uk-terms-of-business",
     });
   }
   
