@@ -12,6 +12,9 @@ const FullPlanDetailsPage = () => {
   const planTypeTitle = isPremium ? 'Premium' : 'Standard';
   
   console.log('FullPlanDetailsPage - pathname:', location.pathname, 'isPremium:', isPremium, 'planType:', planType);
+  
+  const pdfUrl = isPremium ? "/allianz-premium-benefits.pdf" : "/Allianz%20Standard%20Table%20of%20Benefits.pdf";
+  console.log('PDF URL being used:', pdfUrl);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-primary/5 to-secondary/5">
@@ -48,7 +51,7 @@ const FullPlanDetailsPage = () => {
                   <h3 className="font-semibold mb-4">📋 {planTypeTitle} Plan Documentation</h3>
                   <div className="w-full border rounded-lg p-4">
                     <a 
-                      href={isPremium ? "/Allianz%20Premium%20Table%20of%20Benefits.pdf" : "/Allianz%20Standard%20Table%20of%20Benefits.pdf"}
+                      href={pdfUrl}
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="text-primary hover:underline font-medium"
