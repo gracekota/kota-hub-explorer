@@ -118,7 +118,7 @@ const CountryPage = () => {
                               </Button>
                               {country.slug === 'uk' && (
                                 <Link to={`/country/${slug}/allianz-${plan.id.includes('premium') ? 'premium' : 'standard'}`} className="flex-1">
-                                  <Button variant="outline" className="w-full">
+                                  <Button variant="outline" className="w-full" onClick={() => console.log('View Details clicked for plan:', plan.name, 'Route:', `/country/${slug}/allianz-${plan.id.includes('premium') ? 'premium' : 'standard'}`)}>
                                     View Details
                                   </Button>
                                 </Link>

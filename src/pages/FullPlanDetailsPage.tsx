@@ -11,7 +11,7 @@ const FullPlanDetailsPage = () => {
   const planType = isPremium ? 'Premium' : 'Standard';
   const planTypeTitle = isPremium ? 'Premium' : 'Standard';
   
-  console.log('FullPlanDetailsPage rendering with slug:', slug, 'isPremium:', isPremium);
+  console.log('FullPlanDetailsPage - pathname:', location.pathname, 'isPremium:', isPremium, 'planType:', planType);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-primary/5 to-secondary/5">
