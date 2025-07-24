@@ -154,6 +154,7 @@ const CountryPage = () => {
                                         </div>
                                         <div className="space-y-1">
                                           <div className="text-2xl font-bold">€{plan.id.includes('premium') ? '1729.23' : '1356.03'}</div>
+                                          <div className="text-purple-200 text-lg font-bold">/</div>
                                           <div className="text-2xl font-bold">£{plan.id.includes('premium') ? '1470.77' : '1153.21'}</div>
                                         </div>
                                         <div className="text-xs text-purple-200 mt-2">per year</div>
@@ -169,10 +170,11 @@ const CountryPage = () => {
                                           <span>👶</span>
                                           <span>Per Child</span>
                                         </div>
-                                        <div className="space-y-1">
-                                          <div className="text-2xl font-bold">€{plan.id.includes('premium') ? '1383.85' : '1084.82'}</div>
-                                          <div className="text-2xl font-bold">£{plan.id.includes('premium') ? '1176.39' : '922.56'}</div>
-                                        </div>
+                                         <div className="space-y-1">
+                                           <div className="text-2xl font-bold">€{plan.id.includes('premium') ? '1383.85' : '1084.82'}</div>
+                                           <div className="text-purple-200 text-lg font-bold">/</div>
+                                           <div className="text-2xl font-bold">£{plan.id.includes('premium') ? '1176.39' : '922.56'}</div>
+                                         </div>
                                         <div className="text-xs text-purple-200 mt-2">per year</div>
                                       </div>
                                     </div>
