@@ -13,7 +13,7 @@ const FullPlanDetailsPage = () => {
   
   console.log('FullPlanDetailsPage - pathname:', location.pathname, 'isPremium:', isPremium, 'planType:', planType);
   
-  const pdfUrl = isPremium ? "/allianz-premium-benefits.pdf" : "/Allianz%20Standard%20Table%20of%20Benefits.pdf";
+  const pdfUrl = isPremium ? "/Allianz-Premium-Table-of-Benefits.pdf" : "/Allianz%20Standard%20Table%20of%20Benefits.pdf";
   console.log('PDF URL being used:', pdfUrl);
 
   return (
