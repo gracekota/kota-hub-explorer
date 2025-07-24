@@ -35,37 +35,21 @@ const FullPlanDetailsPage = () => {
             </CardHeader>
             <CardContent>
               <div className="prose max-w-none">
-                <p className="text-muted-foreground mb-6">
-                  This section contains comprehensive details about the Allianz International Care plans including coverage limits, exclusions, and terms and conditions.
+                <p className="text-muted-foreground mb-4">
+                  This section contains comprehensive details about the Allianz International Care - Standard plan including coverage limits, exclusions, and terms and conditions.
                 </p>
                 
-                <div className="space-y-6">
-                  <div className="bg-background p-4 rounded-lg border">
-                    <h3 className="font-semibold mb-4">📋 Standard Plan Documentation</h3>
-                    <div className="w-full border rounded-lg p-4">
-                      <a 
-                        href="/Allianz%20Standard%20Table%20of%20Benefits.pdf" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="text-primary hover:underline font-medium"
-                      >
-                        View Allianz Standard Benefits PDF
-                      </a>
-                    </div>
-                  </div>
-
-                  <div className="bg-background p-4 rounded-lg border">
-                    <h3 className="font-semibold mb-4">📋 Premium Plan Documentation</h3>
-                    <div className="w-full border rounded-lg p-4">
-                      <a 
-                        href="/Allianz%20Premium%20Table%20of%20Benefits.pdf" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="text-primary hover:underline font-medium"
-                      >
-                        View Allianz Premium Benefits PDF
-                      </a>
-                    </div>
+                <div className="bg-background p-4 rounded-lg border">
+                  <h3 className="font-semibold mb-4">📋 Plan Documentation</h3>
+                  <div className="w-full border rounded-lg p-4">
+                    <a 
+                      href="/Allianz%20Standard%20Table%20of%20Benefits.pdf" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-primary hover:underline font-medium"
+                    >
+                      View Allianz Standard Benefits PDF
+                    </a>
                   </div>
                 </div>
               </div>
