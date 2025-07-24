@@ -117,7 +117,7 @@ const CountryPage = () => {
                                 <ExternalLink className="ml-2 h-4 w-4" />
                               </Button>
                               {country.slug === 'uk' && (
-                                <Link to={`/country/${slug}/allianz-standard`} className="flex-1">
+                                <Link to={`/country/${slug}/allianz-${plan.id.includes('premium') ? 'premium' : 'standard'}`} className="flex-1">
                                   <Button variant="outline" className="w-full">
                                     View Details
                                   </Button>
