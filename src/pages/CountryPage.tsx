@@ -287,7 +287,7 @@ const CountryPage = () => {
                           <div className="flex space-x-2 mb-3">
                             <Button 
                               className="flex-1"
-                              onClick={() => window.open(plan.quoteUrl, '_blank')}
+                              onClick={() => window.open('https://kota-hub-quote-generator.lovable.app/', '_blank')}
                             >
                               Get a Quote
                               <ExternalLink className="ml-2 h-4 w-4" />
