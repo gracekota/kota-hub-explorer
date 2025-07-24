@@ -148,14 +148,13 @@ const CountryPage = () => {
                                     <div className="absolute inset-0 bg-gradient-to-r from-pink-500 to-purple-500 rounded-xl blur opacity-30 group-hover:opacity-50 transition-opacity"></div>
                                     <div className="relative bg-white/20 backdrop-blur-md rounded-xl p-6 border border-white/30 hover:border-white/50 transition-all duration-300 hover:scale-105">
                                       <div className="text-center">
-                                        <div className="text-purple-100 text-sm font-medium mb-2 flex items-center justify-center gap-2">
+                                        <div className="text-purple-100 text-sm font-medium mb-3 flex items-center justify-center gap-2">
                                           <span>👨‍💼</span>
                                           <span>Per Adult</span>
                                         </div>
-                                        <div className="text-2xl font-bold flex items-center justify-center gap-2">
-                                          <span>€{plan.id.includes('premium') ? '1729.23' : '1356.03'}</span>
-                                          <span className="text-purple-200">/</span>
-                                          <span>£{plan.id.includes('premium') ? '1470.77' : '1153.21'}</span>
+                                        <div className="space-y-1">
+                                          <div className="text-2xl font-bold">€{plan.id.includes('premium') ? '1729.23' : '1356.03'}</div>
+                                          <div className="text-2xl font-bold">£{plan.id.includes('premium') ? '1470.77' : '1153.21'}</div>
                                         </div>
                                         <div className="text-xs text-purple-200 mt-2">per year</div>
                                       </div>
@@ -166,14 +165,13 @@ const CountryPage = () => {
                                     <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl blur opacity-30 group-hover:opacity-50 transition-opacity"></div>
                                     <div className="relative bg-white/20 backdrop-blur-md rounded-xl p-6 border border-white/30 hover:border-white/50 transition-all duration-300 hover:scale-105">
                                       <div className="text-center">
-                                        <div className="text-purple-100 text-sm font-medium mb-2 flex items-center justify-center gap-2">
+                                        <div className="text-purple-100 text-sm font-medium mb-3 flex items-center justify-center gap-2">
                                           <span>👶</span>
                                           <span>Per Child</span>
                                         </div>
-                                        <div className="text-2xl font-bold flex items-center justify-center gap-2">
-                                          <span>€{plan.id.includes('premium') ? '1383.85' : '1084.82'}</span>
-                                          <span className="text-purple-200">/</span>
-                                          <span>£{plan.id.includes('premium') ? '1176.39' : '922.56'}</span>
+                                        <div className="space-y-1">
+                                          <div className="text-2xl font-bold">€{plan.id.includes('premium') ? '1383.85' : '1084.82'}</div>
+                                          <div className="text-2xl font-bold">£{plan.id.includes('premium') ? '1176.39' : '922.56'}</div>
                                         </div>
                                         <div className="text-xs text-purple-200 mt-2">per year</div>
                                       </div>
