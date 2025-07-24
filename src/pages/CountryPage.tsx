@@ -108,14 +108,49 @@ const CountryPage = () => {
                             </div>
                           </CardHeader>
                           <CardContent className="pt-0">
+                            {/* Pricing Display */}
+                            <div className="bg-gradient-to-br from-purple-600 to-purple-800 rounded-lg p-6 mb-4 text-white">
+                              <div className="flex items-center justify-between mb-4">
+                                <div className="flex items-center gap-2">
+                                  <span className="text-lg font-bold">{plan.name}</span>
+                                  <span className="bg-purple-400/30 px-2 py-1 rounded-full text-xs font-medium">
+                                    Annual cost
+                                  </span>
+                                </div>
+                                <span className="text-2xl">{plan.logo}</span>
+                              </div>
+                              
+                              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                                  <div className="text-purple-200 text-sm font-medium mb-2">Per Adult</div>
+                                  <div className="text-2xl font-bold">
+                                    {plan.id.includes('premium') ? '€1729.23' : '€1356.03'}
+                                    <span className="text-lg font-normal text-purple-200 ml-1">
+                                      / {plan.id.includes('premium') ? '£1470.77' : '£1153.21'}
+                                    </span>
+                                  </div>
+                                </div>
+                                
+                                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                                  <div className="text-purple-200 text-sm font-medium mb-2">Per Child</div>
+                                  <div className="text-2xl font-bold">
+                                    {plan.id.includes('premium') ? '€1383.85' : '€1084.82'}
+                                    <span className="text-lg font-normal text-purple-200 ml-1">
+                                      / {plan.id.includes('premium') ? '£1176.39' : '£922.56'}
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                              
+                              <div className="mt-4 text-center">
+                                <div className="text-purple-200 text-sm">
+                                  Fixed pricing • No quotes needed • Ready to enroll
+                                </div>
+                              </div>
+                            </div>
+                            
+                            {/* Action Buttons */}
                             <div className="flex space-x-2 mb-3">
-                              <Button 
-                                className="flex-1"
-                                onClick={() => window.open(plan.quoteUrl, '_blank')}
-                              >
-                                Get a Quote
-                                <ExternalLink className="ml-2 h-4 w-4" />
-                              </Button>
                               {country.slug === 'uk' && (
                                 <Link to={`/country/${slug}/allianz-${plan.id.includes('premium') ? 'premium' : 'standard'}`} className="flex-1">
                                   <Button variant="outline" className="w-full" onClick={() => console.log('View Details clicked for plan:', plan.name, 'Route:', `/country/${slug}/allianz-${plan.id.includes('premium') ? 'premium' : 'standard'}`)}>
@@ -123,6 +158,13 @@ const CountryPage = () => {
                                   </Button>
                                 </Link>
                               )}
+                              <Button 
+                                className="flex-1 bg-purple-600 hover:bg-purple-700 text-white"
+                                onClick={() => window.open('https://kota-hub-quote-generator.lovable.app/', '_blank')}
+                              >
+                                Enroll Now
+                                <ExternalLink className="ml-2 h-4 w-4" />
+                              </Button>
                             </div>
                             <Dialog>
                               <DialogTrigger asChild>
