@@ -133,7 +133,6 @@ const CountryPage = () => {
                                 <div className="flex items-center justify-between mb-6">
                                   <div>
                                     <span className="text-lg font-bold">{plan.name}</span>
-                                    <div className="text-purple-200 text-sm mt-1">Annual pricing</div>
                                   </div>
                                   <button 
                                     onClick={() => togglePricing(plan.id)}
