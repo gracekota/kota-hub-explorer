@@ -224,12 +224,12 @@ const CountryPage = () => {
                                 <DialogHeader>
                                   <DialogTitle>{plan.name} Overview</DialogTitle>
                                 </DialogHeader>
-                                <div className="aspect-video">
+                                <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
                                   <iframe
-                                    src="https://player.vimeo.com/video/YOUR_VIDEO_ID_HERE"
-                                    className="w-full h-full rounded-lg"
-                                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-                                    allowFullScreen
+                                    src={plan.id.includes('standard') ? "https://player.vimeo.com/video/1022523801?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479" : "https://player.vimeo.com/video/YOUR_VIDEO_ID_HERE"}
+                                    frameBorder="0"
+                                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+                                    className="absolute top-0 left-0 w-full h-full rounded-lg"
                                     title={`${plan.name} Video`}
                                   />
                                 </div>
