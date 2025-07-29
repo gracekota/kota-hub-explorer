@@ -241,8 +241,8 @@ const CountryPage = () => {
                     ))}
                   </div>
 
-                  {/* Why Choose Allianz - France only */}
-                  {country.slug === 'france' && (
+                  {/* Why Choose Allianz - France and UK */}
+                  {(country.slug === 'france' || country.slug === 'uk') && (
                     <Card className="bg-muted/50">
                       <CardHeader>
                         <CardTitle className="text-lg">Why Choose Allianz?</CardTitle>
