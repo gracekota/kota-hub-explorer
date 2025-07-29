@@ -478,18 +478,9 @@ const CountryPage = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <Accordion type="single" collapsible className="space-y-2">
-                  {country.faqs.map((faq) => (
-                    <AccordionItem key={faq.id} value={faq.id} className="border border-border rounded-lg px-4">
-                      <AccordionTrigger className="hover:text-primary transition-colors">
-                        {faq.question}
-                      </AccordionTrigger>
-                      <AccordionContent className="text-muted-foreground">
-                        {faq.answer}
-                      </AccordionContent>
-                    </AccordionItem>
-                  ))}
-                </Accordion>
+                <div className="text-center py-8 text-muted-foreground">
+                  Content coming soon...
+                </div>
               </CardContent>
             </Card>
           </TabsContent>
@@ -503,20 +494,8 @@ const CountryPage = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="space-y-4">
-                  {country.onboardingLinks.map((link) => (
-                    <div key={link.id} className="p-4 border border-border rounded-lg hover:shadow-card transition-all duration-300 group">
-                      <div className="flex items-center justify-between">
-                        <div>
-                          <h3 className="font-semibold group-hover:text-primary transition-colors">{link.title}</h3>
-                          <p className="text-sm text-muted-foreground">{link.description}</p>
-                        </div>
-                        <Button variant="outline" size="sm" onClick={() => window.open(link.url, '_blank')}>
-                          <ExternalLink className="h-4 w-4" />
-                        </Button>
-                      </div>
-                    </div>
-                  ))}
+                <div className="text-center py-8 text-muted-foreground">
+                  Content coming soon...
                 </div>
               </CardContent>
             </Card>
