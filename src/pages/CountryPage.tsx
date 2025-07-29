@@ -85,18 +85,23 @@ const CountryPage = () => {
 
           <TabsContent value="plans" className="space-y-8">
             {/* Information Banner */}
-            <div className="bg-purple-50 border border-purple-200 rounded-lg p-4 mb-8">
-              <div className="flex items-start space-x-3">
-                <div className="flex-shrink-0 w-5 h-5 bg-purple-600 rounded-full flex items-center justify-center mt-0.5">
-                  <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+            <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6">
+              <div className="flex items-center space-x-2">
+                <div className="flex-shrink-0">
+                  <svg className="w-5 h-5 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
                   </svg>
                 </div>
                 <div>
-                  <p className="text-purple-900 font-medium">These are International Private Medical Insurance plans</p>
-                  <p className="text-purple-700 text-sm mt-1">Therefore claims are received on both reimbursement basis and direct settlement.</p>
+                  <p className="text-blue-900 font-medium">These are International Private Medical Insurance plans</p>
+                  <p className="text-blue-700 text-sm">Therefore claims are received on both reimbursement basis and direct settlement.</p>
                 </div>
               </div>
+            </div>
+
+            {/* Available Plans Heading */}
+            <div className="mb-6">
+              <h2 className="text-2xl font-bold text-gray-900">Available Plans</h2>
             </div>
 
             {/* UK and France-specific content with providers side by side */}
