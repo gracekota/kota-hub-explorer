@@ -101,7 +101,7 @@ const CountryPage = () => {
 
             {/* Available Plans Heading */}
             <div className="text-center mb-8">
-              <div className="inline-block bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-full shadow-lg">
+              <div className="inline-block bg-gray-800 text-white px-8 py-3 rounded-full shadow-lg">
                 <h2 className="text-xl font-bold">Available Plans</h2>
               </div>
             </div>
