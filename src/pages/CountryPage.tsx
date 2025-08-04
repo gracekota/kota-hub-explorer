@@ -501,6 +501,32 @@ const CountryPage = () => {
             </Card>
           </TabsContent>
         </Tabs>
+        
+        {/* Test Embedded Video Button */}
+        <div className="mt-8 text-center">
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button variant="outline">
+                Test Embedded Video
+              </Button>
+            </DialogTrigger>
+            <DialogContent className="max-w-4xl">
+              <DialogHeader>
+                <DialogTitle>Test Embedded Video</DialogTitle>
+              </DialogHeader>
+              <div className="relative overflow-hidden" style={{ paddingTop: '56.25%' }}>
+                <iframe 
+                  src="https://share.synthesia.io/embeds/videos/02fbd05e-761f-4f65-a88f-78a1240e1452" 
+                  loading="lazy" 
+                  title="Synthesia video player - Sanitas" 
+                  allowFullScreen 
+                  allow="encrypted-media; fullscreen;" 
+                  className="absolute w-full h-full top-0 left-0 border-none p-0 m-0 overflow-hidden"
+                />
+              </div>
+            </DialogContent>
+          </Dialog>
+        </div>
       </div>
     </div>
   );
