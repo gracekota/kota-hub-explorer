@@ -440,6 +440,69 @@ const CountryPage = () => {
                 </div>
                 )}
               </div>
+            ) : country.slug === 'spain' ? (
+              // Spain layout with Sanitas video
+              <div className="space-y-8">
+                {/* Sanitas Video Section */}
+                <Card className="bg-muted/50">
+                  <CardHeader>
+                    <CardTitle className="text-lg">Why Sanitas?</CardTitle>
+                    <CardDescription>
+                      Discover why Sanitas is the right choice for your health insurance needs in Spain.
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <Button variant="outline" className="w-full">
+                          Watch Why Sanitas Video
+                        </Button>
+                      </DialogTrigger>
+                      <DialogContent className="max-w-4xl">
+                        <DialogHeader>
+                          <DialogTitle>Why Sanitas</DialogTitle>
+                        </DialogHeader>
+                        <div className="relative overflow-hidden" style={{ paddingTop: '56.25%' }}>
+                          <iframe 
+                            src="https://share.synthesia.io/embeds/videos/02fbd05e-761f-4f65-a88f-78a1240e1452" 
+                            loading="lazy" 
+                            title="Synthesia video player - Sanitas" 
+                            allowFullScreen 
+                            allow="encrypted-media; fullscreen;" 
+                            className="absolute w-full h-full top-0 left-0 border-none p-0 m-0 overflow-hidden"
+                          />
+                        </div>
+                      </DialogContent>
+                    </Dialog>
+                  </CardContent>
+                </Card>
+
+                {/* Available Plans */}
+                <div className="grid gap-6 md:grid-cols-2">
+                  {country.plans.map((plan) => (
+                    <Card key={plan.id} className="group hover:shadow-card-hover transition-all duration-300 animate-scale-in">
+                      <CardHeader>
+                        <div className="flex items-center space-x-3">
+                          <span className="text-2xl">{plan.logo}</span>
+                          <div>
+                            <CardTitle className="group-hover:text-primary transition-colors">{plan.name}</CardTitle>
+                            <CardDescription>{plan.description}</CardDescription>
+                          </div>
+                        </div>
+                      </CardHeader>
+                      <CardContent>
+                        <Button 
+                          className="w-full group-hover:bg-primary-hover transition-colors"
+                          onClick={() => window.open(plan.quoteUrl, '_blank')}
+                        >
+                          Get a Quote
+                          <ExternalLink className="ml-2 h-4 w-4" />
+                        </Button>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </div>
             ) : (
               // Default layout for other countries
               <div className="grid gap-6 md:grid-cols-2">
