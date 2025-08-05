@@ -462,14 +462,14 @@ const CountryPage = () => {
                         <DialogHeader>
                           <DialogTitle>Why Sanitas</DialogTitle>
                         </DialogHeader>
-                        <div className="relative overflow-hidden" style={{ paddingTop: '56.25%' }}>
+                        <div style={{ position: 'relative', overflow: 'hidden', aspectRatio: '1920/1080' }}>
                           <iframe 
-                            src="https://share.synthesia.io/embeds/videos/02fbd05e-761f-4f65-a88f-78a1240e1452" 
+                            src="https://share.synthesia.io/embeds/videos/34021dcb-a2d5-4a76-80a9-133ccea8f50b" 
                             loading="lazy" 
-                            title="Synthesia video player - Sanitas" 
+                            title="Synthesia video player - Why Sanitas?" 
                             allowFullScreen 
                             allow="encrypted-media; fullscreen;" 
-                            className="absolute w-full h-full top-0 left-0 border-none p-0 m-0 overflow-hidden"
+                            style={{ position: 'absolute', width: '100%', height: '100%', top: 0, left: 0, border: 'none', padding: 0, margin: 0, overflow: 'hidden' }}
                           />
                         </div>
                       </DialogContent>
