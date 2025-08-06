@@ -393,13 +393,13 @@ const CountryPage = () => {
                               <DialogHeader>
                                 <DialogTitle>{plan.name} Overview</DialogTitle>
                               </DialogHeader>
-                              <div className="aspect-video">
-                                <iframe
-                                  src="https://player.vimeo.com/video/YOUR_VIDEO_ID_HERE"
-                                  className="w-full h-full rounded-lg"
-                                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-                                  allowFullScreen
-                                  title={`${plan.name} Video`}
+                              <div style={{padding:'56.25% 0 0 0',position:'relative'}}>
+                                <iframe 
+                                  src="https://player.vimeo.com/video/1045102439?badge=0&autopause=0&player_id=0&app_id=58479" 
+                                  frameBorder="0" 
+                                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 
+                                  style={{position:'absolute',top:0,left:0,width:'100%',height:'100%'}} 
+                                  title="CoreCover1&2_Ch"
                                 />
                               </div>
                             </DialogContent>
@@ -424,13 +424,13 @@ const CountryPage = () => {
                           <DialogHeader>
                             <DialogTitle>Discover Vitality Health Insurance</DialogTitle>
                           </DialogHeader>
-                          <div className="aspect-video">
-                            <iframe
-                              src="https://player.vimeo.com/video/1045155143?badge=0&autopause=0&player_id=0&app_id=58479"
-                              className="w-full h-full rounded-lg"
-                              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-                              allowFullScreen
-                              title="Why Vitality"
+                          <div style={{padding:'56.25% 0 0 0',position:'relative'}}>
+                            <iframe 
+                              src="https://player.vimeo.com/video/1045102439?badge=0&autopause=0&player_id=0&app_id=58479" 
+                              frameBorder="0" 
+                              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 
+                              style={{position:'absolute',top:0,left:0,width:'100%',height:'100%'}} 
+                              title="CoreCover1&2_Ch"
                             />
                           </div>
                         </DialogContent>
